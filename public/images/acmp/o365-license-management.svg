@@ -1,0 +1,44 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="40" fill="#1a0c19"/>
+  <text x="15" y="25" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">ACMP O365 License Management</text>
+  
+  <!-- License Overview -->
+  <rect x="20" y="60" width="360" height="40" fill="#0078d4" rx="5"/>
+  <text x="30" y="80" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Microsoft 365 Lizenz-Übersicht</text>
+  <text x="30" y="95" fill="white" font-family="Arial, sans-serif" font-size="10">Automatische Synchronisation mit Microsoft 365 Admin Center</text>
+  
+  <!-- License Cards -->
+  <rect x="20" y="120" width="110" height="80" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <rect x="25" y="125" width="100" height="25" fill="#10b981" rx="4"/>
+  <text x="30" y="142" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">E3 Licenses</text>
+  <text x="30" y="160" fill="#374151" font-family="Arial, sans-serif" font-size="10">Verfügbar: 45</text>
+  <text x="30" y="175" fill="#374151" font-family="Arial, sans-serif" font-size="10">Zugewiesen: 38</text>
+  <text x="30" y="190" fill="#10b981" font-family="Arial, sans-serif" font-size="10">Frei: 7</text>
+  
+  <rect x="145" y="120" width="110" height="80" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <rect x="150" y="125" width="100" height="25" fill="#f59e0b" rx="4"/>
+  <text x="155" y="142" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">E5 Licenses</text>
+  <text x="155" y="160" fill="#374151" font-family="Arial, sans-serif" font-size="10">Verfügbar: 12</text>
+  <text x="155" y="175" fill="#374151" font-family="Arial, sans-serif" font-size="10">Zugewiesen: 11</text>
+  <text x="155" y="190" fill="#f59e0b" font-family="Arial, sans-serif" font-size="10">Frei: 1</text>
+  
+  <rect x="270" y="120" width="110" height="80" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <rect x="275" y="125" width="100" height="25" fill="#6366f1" rx="4"/>
+  <text x="280" y="142" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Power BI Pro</text>
+  <text x="280" y="160" fill="#374151" font-family="Arial, sans-serif" font-size="10">Verfügbar: 25</text>
+  <text x="280" y="175" fill="#374151" font-family="Arial, sans-serif" font-size="10">Zugewiesen: 18</text>
+  <text x="280" y="190" fill="#6366f1" font-family="Arial, sans-serif" font-size="10">Frei: 7</text>
+  
+  <!-- Action Panel -->
+  <rect x="20" y="220" width="360" height="50" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2" rx="5"/>
+  <text x="30" y="240" fill="#0c4a6e" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Automatische Aktionen:</text>
+  <text x="30" y="255" fill="#075985" font-family="Arial, sans-serif" font-size="10">✓ Lizenz-Zuweisung bei Benutzererstellung  ✓ Kostenoptimierung durch Monitoring</text>
+  
+  <!-- ScaleITS Logo Area -->
+  <text x="20" y="285" fill="#646464" font-family="Arial, sans-serif" font-size="10">ScaleITS ACMP Client Command</text>
+  <text x="20" y="298" fill="#d8000c" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SITS-CC-O365LiMgmt</text>
+</svg>

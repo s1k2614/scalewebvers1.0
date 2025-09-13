@@ -1,0 +1,45 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8fafc"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="60" fill="#1a0c19"/>
+  <text x="30" y="35" font-family="Arial, sans-serif" font-size="18" fill="white" font-weight="bold">ACMP - AD Last Logon Timestamp</text>
+  
+  <!-- Main Content Area -->
+  <rect x="20" y="80" width="560" height="300" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  
+  <!-- Table Header -->
+  <rect x="40" y="100" width="520" height="40" fill="#646464" rx="4"/>
+  <text x="60" y="125" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">Computer Name</text>
+  <text x="200" y="125" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">User</text>
+  <text x="320" y="125" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">Last Logon</text>
+  <text x="480" y="125" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">Status</text>
+  
+  <!-- Table Rows -->
+  <rect x="40" y="140" width="520" height="35" fill="#f8fafc"/>
+  <text x="60" y="162" font-family="Arial, sans-serif" font-size="12" fill="#374151">PC-001</text>
+  <text x="200" y="162" font-family="Arial, sans-serif" font-size="12" fill="#374151">j.mustermann</text>
+  <text x="320" y="162" font-family="Arial, sans-serif" font-size="12" fill="#374151">2024-01-15 09:30:15</text>
+  <circle cx="495" cy="157" r="6" fill="#10b981"/>
+  
+  <rect x="40" y="175" width="520" height="35" fill="white"/>
+  <text x="60" y="197" font-family="Arial, sans-serif" font-size="12" fill="#374151">PC-002</text>
+  <text x="200" y="197" font-family="Arial, sans-serif" font-size="12" fill="#374151">m.mueller</text>
+  <text x="320" y="197" font-family="Arial, sans-serif" font-size="12" fill="#374151">2024-01-14 16:45:32</text>
+  <circle cx="495" cy="192" r="6" fill="#f59e0b"/>
+  
+  <rect x="40" y="210" width="520" height="35" fill="#f8fafc"/>
+  <text x="60" y="232" font-family="Arial, sans-serif" font-size="12" fill="#374151">PC-003</text>
+  <text x="200" y="232" font-family="Arial, sans-serif" font-size="12" fill="#374151">a.weber</text>
+  <text x="320" y="232" font-family="Arial, sans-serif" font-size="12" fill="#374151">2024-01-13 11:20:45</text>
+  <circle cx="495" cy="227" r="6" fill="#ef4444"/>
+  
+  <!-- Clock Icon -->
+  <circle cx="500" cy="320" r="30" fill="none" stroke="#d8000c" stroke-width="3"/>
+  <line x1="500" y1="305" x2="500" y2="320" stroke="#d8000c" stroke-width="2"/>
+  <line x1="500" y1="320" x2="515" y2="320" stroke="#d8000c" stroke-width="2"/>
+  
+  <!-- ScaleITS Logo -->
+  <text x="450" y="355" font-family="Arial, sans-serif" font-size="12" fill="#646464">ScaleITS GmbH</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="40" fill="#1a0c19"/>
+  <text x="15" y="25" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">ACMP Printer Management</text>
+  
+  <!-- Printer List -->
+  <rect x="20" y="60" width="360" height="30" fill="#646464" rx="4"/>
+  <text x="30" y="80" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Drucker Name</text>
+  <text x="150" y="80" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Status</text>
+  <text x="220" y="80" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Standort</text>
+  <text x="300" y="80" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Aktionen</text>
+  
+  <!-- Printer Entries -->
+  <rect x="20" y="90" width="360" height="25" fill="white" stroke="#e2e8f0"/>
+  <text x="30" y="107" fill="#374151" font-family="Arial, sans-serif" font-size="11">HP LaserJet Pro 400</text>
+  <circle cx="165" cy="102.5" r="4" fill="#10b981"/>
+  <text x="175" y="107" fill="#10b981" font-family="Arial, sans-serif" font-size="10">Online</text>
+  <text x="230" y="107" fill="#374151" font-family="Arial, sans-serif" font-size="11">Büro 1.OG</text>
+  <rect x="310" y="97" width="50" height="15" fill="#d8000c" rx="2"/>
+  <text x="322" y="107" fill="white" font-family="Arial, sans-serif" font-size="8">Installieren</text>
+  
+  <rect x="20" y="115" width="360" height="25" fill="#f9fafb" stroke="#e2e8f0"/>
+  <text x="30" y="132" fill="#374151" font-family="Arial, sans-serif" font-size="11">Canon Pixma 550</text>
+  <circle cx="165" cy="127.5" r="4" fill="#ef4444"/>
+  <text x="175" y="132" fill="#ef4444" font-family="Arial, sans-serif" font-size="10">Offline</text>
+  <text x="230" y="132" fill="#374151" font-family="Arial, sans-serif" font-size="11">Büro EG</text>
+  <rect x="310" y="122" width="50" height="15" fill="#646464" rx="2"/>
+  <text x="325" y="132" fill="white" font-family="Arial, sans-serif" font-size="8">Prüfen</text>
+  
+  <rect x="20" y="140" width="360" height="25" fill="white" stroke="#e2e8f0"/>
+  <text x="30" y="157" fill="#374151" font-family="Arial, sans-serif" font-size="11">Xerox WorkCentre</text>
+  <circle cx="165" cy="152.5" r="4" fill="#f59e0b"/>
+  <text x="175" y="157" fill="#f59e0b" font-family="Arial, sans-serif" font-size="10">Wartung</text>
+  <text x="230" y="157" fill="#374151" font-family="Arial, sans-serif" font-size="11">Büro 2.OG</text>
+  <rect x="310" y="147" width="50" height="15" fill="#10b981" rx="2"/>
+  <text x="322" y="157" fill="white" font-family="Arial, sans-serif" font-size="8">Installiert</text>
+  
+  <!-- Management Panel -->
+  <rect x="20" y="180" width="360" height="80" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2" rx="5"/>
+  <text x="30" y="200" fill="#0c4a6e" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Drucker Management Funktionen</text>
+  
+  <!-- Action Buttons -->
+  <rect x="30" y="210" width="100" height="20" fill="#d8000c" rx="3"/>
+  <text x="55" y="223" fill="white" font-family="Arial, sans-serif" font-size="9">Masseninstallation</text>
+  
+  <rect x="140" y="210" width="100" height="20" fill="#646464" rx="3"/>
+  <text x="170" y="223" fill="white" font-family="Arial, sans-serif" font-size="9">Treiber Update</text>
+  
+  <rect x="250" y="210" width="100" height="20" fill="#10b981" rx="3"/>
+  <text x="280" y="223" fill="white" font-family="Arial, sans-serif" font-size="9">Status Report</text>
+  
+  <text x="30" y="245" fill="#075985" font-family="Arial, sans-serif" font-size="10">✓ Automatische Erkennung neuer Drucker</text>
+  <text x="30" y="255" fill="#075985" font-family="Arial, sans-serif" font-size="10">✓ Standortbasierte Zuweisung</text>
+  
+  <!-- ScaleITS Logo Area -->
+  <text x="20" y="280" fill="#646464" font-family="Arial, sans-serif" font-size="10">ScaleITS ACMP Client Command</text>
+  <text x="20" y="295" fill="#d8000c" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SITS-CC-PrintMgmt</text>
+</svg>

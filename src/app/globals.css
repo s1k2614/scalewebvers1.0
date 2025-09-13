@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+  --scaleit-gray: #646464;
+  --scaleit-red: #d8000c;
+  --scaleit-purple: #1a0c19;
+  --scaleit-black: #000000;
+  --scaleit-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Roboto', sans-serif !important;
+  color: var(--scaleit-black);
+  background: var(--scaleit-white);
+}
+
+* {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(216, 0, 12, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(216, 0, 12, 0.6); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* ScaleITS CI Utility Classes */
+.text-scaleit-red { color: var(--scaleit-red); }
+.text-scaleit-gray { color: var(--scaleit-gray); }
+.text-scaleit-purple { color: var(--scaleit-purple); }
+.text-scaleit-black { color: var(--scaleit-black); }
+.text-scaleit-white { color: var(--scaleit-white); }
+
+.bg-scaleit-red { background-color: var(--scaleit-red); }
+.bg-scaleit-gray { background-color: var(--scaleit-gray); }
+.bg-scaleit-purple { background-color: var(--scaleit-purple); }
+.bg-scaleit-black { background-color: var(--scaleit-black); }
+.bg-scaleit-white { background-color: var(--scaleit-white); }
+
+.border-scaleit-red { border-color: var(--scaleit-red); }
+.border-scaleit-gray { border-color: var(--scaleit-gray); }
+.border-scaleit-purple { border-color: var(--scaleit-purple); }
+.border-scaleit-black { border-color: var(--scaleit-black); }
+.border-scaleit-white { border-color: var(--scaleit-white); }

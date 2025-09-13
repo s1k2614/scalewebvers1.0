@@ -1,0 +1,5 @@
+{
+  "/authn/page": "app/authn/page.js",
+  "/microsoft/page": "app/microsoft/page.js",
+  "/page": "app/page.js"
+}

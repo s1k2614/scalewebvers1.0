@@ -1,0 +1,46 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="40" fill="#1a0c19"/>
+  <text x="15" y="25" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">ACMP Bitlocker Management</text>
+  
+  <!-- Drive Status Cards -->
+  <rect x="20" y="60" width="170" height="100" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <rect x="25" y="65" width="160" height="30" fill="#10b981" rx="4"/>
+  <text x="35" y="85" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">C:\ Encrypted</text>
+  <text x="35" y="110" fill="#374151" font-family="Arial, sans-serif" font-size="11">Status: Fully Encrypted</text>
+  <text x="35" y="125" fill="#374151" font-family="Arial, sans-serif" font-size="11">Method: TPM + PIN</text>
+  <text x="35" y="140" fill="#374151" font-family="Arial, sans-serif" font-size="11">Recovery Key: Available</text>
+  
+  <rect x="210" y="60" width="170" height="100" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <rect x="215" y="65" width="160" height="30" fill="#f59e0b" rx="4"/>
+  <text x="225" y="85" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">D:\ Pending</text>
+  <text x="225" y="110" fill="#374151" font-family="Arial, sans-serif" font-size="11">Status: Encryption Running</text>
+  <text x="225" y="125" fill="#374151" font-family="Arial, sans-serif" font-size="11">Progress: 67%</text>
+  <text x="225" y="140" fill="#374151" font-family="Arial, sans-serif" font-size="11">Estimated: 15 min</text>
+  
+  <!-- Control Panel -->
+  <rect x="20" y="180" width="360" height="80" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2" rx="5"/>
+  <text x="30" y="200" fill="#0c4a6e" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Bitlocker Control Panel</text>
+  
+  <!-- Buttons -->
+  <rect x="30" y="210" width="80" height="25" fill="#d8000c" rx="4"/>
+  <text x="50" y="227" fill="white" font-family="Arial, sans-serif" font-size="10">Encrypt</text>
+  
+  <rect x="120" y="210" width="80" height="25" fill="#646464" rx="4"/>
+  <text x="140" y="227" fill="white" font-family="Arial, sans-serif" font-size="10">Decrypt</text>
+  
+  <rect x="210" y="210" width="80" height="25" fill="#10b981" rx="4"/>
+  <text x="225" y="227" fill="white" font-family="Arial, sans-serif" font-size="10">Backup Key</text>
+  
+  <rect x="300" y="210" width="70" height="25" fill="#6366f1" rx="4"/>
+  <text x="320" y="227" fill="white" font-family="Arial, sans-serif" font-size="10">Report</text>
+  
+  <text x="30" y="250" fill="#075985" font-family="Arial, sans-serif" font-size="11">✓ Automatische Verschlüsselung neuer Laufwerke</text>
+  
+  <!-- ScaleITS Logo Area -->
+  <text x="20" y="280" fill="#646464" font-family="Arial, sans-serif" font-size="10">ScaleITS ACMP Client Command</text>
+  <text x="20" y="295" fill="#d8000c" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SITS-CC-BitMgmt</text>
+</svg>
