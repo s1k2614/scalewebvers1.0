@@ -1,3 +1,5 @@
 {
-  "/acmp/page": "app/acmp/page.js"
+  "/not-found": "app/not-found.js",
+  "/acmp-individual/page": "app/acmp-individual/page.js",
+  "/acmp-individual/bitlocker-management/page": "app/acmp-individual/bitlocker-management/page.js"
 }
