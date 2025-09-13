@@ -7,7 +7,7 @@ import Link from 'next/link';
 import {
   Phone, CheckCircle, Star, ArrowRight,
   Video, MessageSquare, Users, Smartphone,
-  Monitor, Award, ChevronRight, Zap, Headphones
+  Monitor, Award, ChevronRight, Zap, Headphones, Cloud, Server
 } from 'lucide-react';
 
 export default function ThreeCXPage() {
