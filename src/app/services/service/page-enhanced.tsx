@@ -60,7 +60,7 @@ export default function ServicePage() {
       subtitle: "Konzentrieren Sie sich auf das Wesentliche – den Rest machen wir.",
       description: "Zuverlässiger IT-Betrieb und kontinuierliche Überwachung Ihrer IT-Infrastruktur für maximale Verfügbarkeit.",
       features: [
-        "24/7 Monitoring",
+        "Monitoring 8-18 Uhr",
         "Proaktive Wartung", 
         "Performance Optimierung",
         "Incident Management"
@@ -91,7 +91,7 @@ export default function ServicePage() {
         "Multi-Level Support",
         "Schnelle Reaktionszeit",
         "Remote & Vor-Ort",
-        "24/7 Emergency"
+        "Emergency 8-18 Uhr"
       ],
       link: "/services/wartung", 
       color: "from-indigo-500 to-purple-500"
@@ -128,7 +128,7 @@ export default function ServicePage() {
       icon: Award
     },
     {
-      value: "24/7",
+      value: "8-18 Uhr",
       label: "Support verfügbar", 
       icon: Clock
     },

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Navigation from '../../../components/Navigation';
+import Hero from '../../../components/Hero';
 import Footer from '../../../components/Footer';
 import { 
   Lightbulb, Users, Target, CheckCircle, Clock, 
@@ -300,7 +300,7 @@ export default function BeratungPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-green-50 to-teal-100">
-      <Navigation />
+      <Hero />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

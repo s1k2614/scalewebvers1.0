@@ -317,7 +317,7 @@ export default function AzurePage() {
                   "Migrationsbewertung und Planung",
                   "Datenmigration und Anwendungsumstellung",
                   "Performance-Optimierung",
-                  "24/7 Support während der Migration"
+                  "Support 8-18 Uhr während der Migration"
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />

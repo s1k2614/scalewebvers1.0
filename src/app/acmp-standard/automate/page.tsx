@@ -54,7 +54,7 @@ const automateModule = {
     'Verbesserung der Service-Qualität durch Konsistenz',
     'Schnellere Incident Response durch Automatisierung',
     'Kosteneinsparungen durch effizientere Prozesse',
-    '24/7 Betrieb ohne menschliche Intervention',
+    'Betrieb 8-18 Uhr ohne menschliche Intervention',
     'Skalierbarkeit für wachsende IT-Umgebungen'
   ],
   useCases: [

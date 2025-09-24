@@ -239,7 +239,7 @@ export default function ImplementationPage() {
         "Change Management Support",
         "6 Monate Premium Support",
         "Dedicated Project Manager",
-        "24/7 Go-Live Support",
+        "Go-Live Support 8-18 Uhr",
         "Advanced Monitoring & Alerting"
       ],
       suitable: "200+ Benutzer",

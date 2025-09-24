@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import Link from 'next/link';
 import {
   Shield, Key, Phone, Server, HardDrive, ArrowRight,
-  CheckCircle, Zap, Users, Globe, Lock, Network,
+  CheckCircle, Users, Globe, Lock, Network,
   Cloud, Monitor, Settings, Award, Star, ChevronRight
 } from 'lucide-react';
 
@@ -19,13 +19,14 @@ export default function NetzwerkInfrastrukturPage() {
       description: 'Umfassender Netzwerkschutz mit Advanced Threat Protection, Zero-Day-Schutz und intelligenter Traffic-Analyse.',
       icon: Shield,
       color: 'from-red-600 to-red-800',
+      link: '/services/firewall',
       features: [
         'Next-Generation Firewall',
         'Advanced Threat Protection',
         'Zero-Day Malware Schutz',
         'SD-WAN Integration',
         'Cloud-basierte Management',
-        '24/7 Security Updates'
+        'Security Updates 8-18 Uhr'
       ],
       benefits: [
         '99.9% Threat Detection Rate',
@@ -42,6 +43,7 @@ export default function NetzwerkInfrastrukturPage() {
       description: 'Professionelle Passwortverwaltung mit Zero-Knowledge-Architektur und Team-Collaboration-Features.',
       icon: Key,
       color: 'from-blue-600 to-blue-800',
+      link: '/services/password-management',
       features: [
         'Zero-Knowledge Architektur',
         'Team-Passwort-Sharing',
@@ -65,6 +67,7 @@ export default function NetzwerkInfrastrukturPage() {
       description: 'Cloud-basierte VoIP-Telefonanlage mit Video-Konferenzen, Chat und CRM-Integration.',
       icon: Phone,
       color: 'from-green-600 to-green-800',
+      link: '/services/voip-telefonie',
       features: [
         'Cloud-basierte Telefonie',
         'HD Video-Konferenzen',
@@ -88,6 +91,7 @@ export default function NetzwerkInfrastrukturPage() {
       description: 'Leistungsstarke Virtualisierungslösungen für Server, Desktop und Cloud-Infrastruktur.',
       icon: Server,
       color: 'from-purple-600 to-purple-800',
+      link: '/services/virtualisierung',
       features: [
         'vSphere Hypervisor',
         'vCenter Management',
@@ -111,6 +115,7 @@ export default function NetzwerkInfrastrukturPage() {
       description: 'Kostenlose Open-Source-Virtualisierung mit Web-Interface und Enterprise-Features.',
       icon: HardDrive,
       color: 'from-orange-600 to-orange-800',
+      link: '/services/open-source-virtualisierung',
       features: [
         'KVM & LXC Container',
         'Web-basiertes Management',
@@ -271,10 +276,13 @@ export default function NetzwerkInfrastrukturPage() {
                           <IconComponent className="w-20 h-20 mb-6 mx-auto" />
                           <h3 className="text-2xl font-bold mb-4">{product.name}</h3>
                           <p className="text-white/90 mb-6">{product.tagline}</p>
-                          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold hover:bg-white/30 transition-all duration-300 cursor-pointer">
+                          <Link
+                            href={product.link}
+                            className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold hover:bg-white/30 transition-all duration-300"
+                          >
                             <span>Mehr erfahren</span>
                             <ChevronRight className="w-4 h-4 ml-2" />
-                          </div>
+                          </Link>
                         </div>
                       </div>
                     </motion.div>

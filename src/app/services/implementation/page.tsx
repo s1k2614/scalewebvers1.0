@@ -240,7 +240,7 @@ export default function ImplementationPage() {
         "Change Management Support",
         "6 Monate Premium Support",
         "Dedicated Project Manager",
-        "24/7 Go-Live Support",
+        "Go-Live Support 8-18 Uhr",
         "Advanced Monitoring & Alerting"
       ],
       suitable: "200+ Benutzer",
@@ -334,7 +334,7 @@ export default function ImplementationPage() {
       </section>
 
       {/* Implementation Services */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

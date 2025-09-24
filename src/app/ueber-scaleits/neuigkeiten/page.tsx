@@ -31,7 +31,7 @@ export default function NeuigkeitenPage() {
       typeLabel: 'Vollzeit',
       salary: '60.000 - 80.000 €',
       description: 'Wir suchen einen erfahrenen Full-Stack Developer zur Verstärkung unseres Teams.',
-      color: 'from-scaleit-red to-red-600',
+      color: 'from-scaleit-purple to-purple-600',
       icon: <Briefcase className="w-5 h-5" />,
       link: '/jobs/senior-developer'
     },
@@ -44,7 +44,7 @@ export default function NeuigkeitenPage() {
       typeLabel: 'Vollzeit',
       salary: '55.000 - 75.000 €',
       description: 'Als IT Consultant beraten Sie unsere Kunden bei der digitalen Transformation.',
-      color: 'from-scaleit-red to-red-600',
+      color: 'from-blue-500 to-indigo-600',
       icon: <Briefcase className="w-5 h-5" />,
       link: '/jobs/it-consultant'
     }
@@ -62,7 +62,7 @@ export default function NeuigkeitenPage() {
       excerpt: 'ScaleITS erweitert seine Präsenz und eröffnet eine neue Niederlassung in Berlin.',
       color: 'from-scaleit-red to-red-600',
       icon: <Newspaper className="w-5 h-5" />,
-      link: '/news/scaleits-expansion-2025'
+      link: '/it-sicherheitsupdates/scaleits-expansion-2025'
     },
     {
       id: 'cybersecurity-trends-2025',
@@ -72,9 +72,9 @@ export default function NeuigkeitenPage() {
       date: '8. September 2025',
       author: 'Dr. Sarah Wagner',
       excerpt: 'Der diesjährige Cybersecurity-Report zeigt neue Bedrohungen und Schutzstrategien.',
-      color: 'from-scaleit-red to-red-600',
+      color: 'from-green-500 to-emerald-600',
       icon: <Newspaper className="w-5 h-5" />,
-      link: '/news/cybersecurity-trends-2025'
+      link: '/it-sicherheitsupdates/cybersecurity-trends-2025'
     }
   ], []);
 
@@ -100,7 +100,7 @@ export default function NeuigkeitenPage() {
   const tabData = [
     { id: 'all', label: 'Alle Neuigkeiten', count: allItems.length },
     { id: 'jobs', label: 'Jobs', count: jobListings.length },
-    { id: 'news', label: 'News', count: newsListings.length }
+    { id: 'news', label: 'IT-Sicherheitsupdates', count: newsListings.length }
   ];
 
   return (
@@ -164,7 +164,7 @@ export default function NeuigkeitenPage() {
           >
             {activeTab === 'all' && 'Alle Neuigkeiten'}
             {activeTab === 'jobs' && 'Aktuelle Stellenangebote'}
-            {activeTab === 'news' && 'Aktuelle News'}
+            {activeTab === 'news' && 'Aktuelle IT-Sicherheitsupdates'}
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -250,10 +250,10 @@ export default function NeuigkeitenPage() {
                 Alle Jobs ansehen
               </Link>
               <Link
-                href="/news"
+                href="/it-sicherheitsupdates"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-scaleit-red to-red-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-red-700 transition-colors duration-200"
               >
-                Alle News ansehen
+                Alle IT-Sicherheitsupdates ansehen
               </Link>
             </div>
           </div>
@@ -261,7 +261,7 @@ export default function NeuigkeitenPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-scaleit-purple to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-scaleit-purple to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

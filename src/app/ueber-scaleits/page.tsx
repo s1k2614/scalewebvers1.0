@@ -3,9 +3,10 @@
 import { useState, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
-import { Users, Newspaper, Building2, Target, Heart, Award } from 'lucide-react';
+import { Users, Newspaper, Building2, Target, Heart, Award, ArrowRight, Users2, Shield } from 'lucide-react';
 
 export default function UeberScaleITSPage() {
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
@@ -22,13 +23,13 @@ export default function UeberScaleITSPage() {
   // Memoize section data
   const sections = useMemo(() => [
     {
-      id: 'unternehmen',
-      title: 'Unser Unternehmen',
-      description: 'Erfahren Sie mehr über ScaleITS - unsere Geschichte, Werte und Vision für die Zukunft der IT.',
-      icon: <Building2 className="w-8 h-8" />,
+      id: 'it-updates',
+      title: 'IT-Sicherheitsupdates',
+      description: 'Bleiben Sie informiert über aktuelle IT-Sicherheitsvorfälle, Updates und wichtige Änderungen in der IT-Branche.',
+      icon: <Shield className="w-8 h-8" />,
       color: 'from-scaleit-red to-red-600',
-      link: '/unternehmen',
-      features: ['Unternehmensgeschichte', 'Unsere Werte', 'Team & Kultur', 'Zertifizierungen']
+      link: '/it-sicherheitsupdates',
+      features: ['Sicherheitsvorfälle', 'Software-Updates', 'Compliance-Änderungen', 'IT-Trends']
     },
     {
       id: 'neuigkeiten',
@@ -189,8 +190,147 @@ export default function UeberScaleITSPage() {
         </div>
       </section>
 
+      {/* Team Section - Unternehmensseite Preview */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center bg-gradient-to-r from-scaleit-red to-purple-600 text-white px-6 py-3 rounded-full mb-8">
+              <Users2 className="w-6 h-6 mr-3" />
+              <span className="text-lg font-bold">Unser Team</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-scaleit-black mb-6">
+              Die Menschen hinter
+              <span className="ml-2 bg-gradient-to-r from-scaleit-red to-purple-600 bg-clip-text text-transparent">
+                ScaleITS
+              </span>
+            </h2>
+
+            <p className="text-xl text-scaleit-gray max-w-3xl mx-auto mb-12">
+              Erfahren Sie mehr über unser erfahrenes Team von IT-Experten, die Ihre digitale Zukunft gestalten.
+              Von der Geschäftsführung über Technik bis zum Vertrieb - wir sind Ihr kompetenter Partner.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Team Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/unternehmen/team-all.png"
+                  alt="ScaleITS Team"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                {/* Overlay für bessere Lesbarkeit */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+
+                {/* Team Stats Overlay */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white">
+                    <div className="grid grid-cols-3 gap-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold">50+</div>
+                        <div className="text-sm text-white/80">Mitarbeiter</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold">15+</div>
+                        <div className="text-sm text-white/80">Jahre Erfahrung</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold">100%</div>
+                        <div className="text-sm text-white/80">Engagement</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Team Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <div>
+                <h3 className="text-3xl font-bold text-scaleit-black mb-4">
+                  Unser Team im Überblick
+                </h3>
+                <p className="text-lg text-scaleit-gray leading-relaxed mb-6">
+                  Bei ScaleITS arbeiten erfahrene IT-Experten aus verschiedenen Fachbereichen zusammen,
+                  um Ihnen die besten Lösungen zu bieten. Von der strategischen Geschäftsführung über
+                  technische Entwicklung bis hin zum kompetenten Vertrieb - wir sind ein eingespieltes Team.
+                </p>
+              </div>
+
+              {/* Team Highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                  <div className="w-12 h-12 bg-gradient-to-r from-scaleit-red to-red-600 rounded-lg flex items-center justify-center mb-4">
+                    <Building2 className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-scaleit-black mb-2">Geschäftsführung</h4>
+                  <p className="text-sm text-scaleit-gray">Strategische Vision und langfristige Partnerschaften</p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center mb-4">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-scaleit-black mb-2">Technik & Entwicklung</h4>
+                  <p className="text-sm text-scaleit-gray">Innovative Lösungen und technische Exzellenz</p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-green-800 rounded-lg flex items-center justify-center mb-4">
+                    <Heart className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-scaleit-black mb-2">Sales & Vertrieb</h4>
+                  <p className="text-sm text-scaleit-gray">Persönliche Betreuung und maßgeschneiderte Beratung</p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg flex items-center justify-center mb-4">
+                    <Award className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-scaleit-black mb-2">Backoffice</h4>
+                  <p className="text-sm text-scaleit-gray">Reibungslose Abläufe und höchste Qualität</p>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-6">
+                <Link
+                  href="/unternehmen"
+                  className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-scaleit-red to-red-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  <span className="text-lg">Lernen Sie uns kennen</span>
+                  <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <p className="text-sm text-scaleit-gray mt-3">
+                  Entdecken Sie unser vollständiges Team und unsere Unternehmensgeschichte
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Mission Section */}
-      <section className="py-16 bg-gradient-to-r from-scaleit-black to-gray-800">
+      <section className="py-20 bg-gradient-to-r from-scaleit-black to-gray-800">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -226,7 +366,7 @@ export default function UeberScaleITSPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-scaleit-red to-red-600">
+      <section className="py-20 bg-gradient-to-r from-scaleit-red to-red-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

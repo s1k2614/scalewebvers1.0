@@ -1,203 +1,184 @@
-'use client';
+﻿'use client';
 
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
+import SimplicityBanner from '../../components/SimplicityBanner';
 
 export default function ServicesPage() {
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  // Memoize hover handlers für Performance
-  const handleMouseEnter = useCallback((serviceId: string) => {
-    setHoveredService(serviceId);
-  }, []);
+  // Service-Kategorien
+  const categories = useMemo(() => [
+    { id: 'all', name: 'Alle Services', icon: '/icons/widgets_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg' },
+    { id: 'beratung', name: 'Beratung', icon: '/icons/psychology_alt_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg' },
+    { id: 'implementation', name: 'Implementation', icon: '/icons/settings_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg' },
+    { id: 'support', name: 'Support', icon: '/icons/help_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg' }
+  ], []);
 
-  const handleMouseLeave = useCallback(() => {
-    setHoveredService(null);
-  }, []);
-
-  // Memoize service data to prevent unnecessary re-renders
-  const coreServices = useMemo(() => [
+  // Services Daten
+  const services = useMemo(() => [
     {
-      id: 'beratung',
-      title: 'IT-Beratung & Strategische Planung',
+      id: 'it-beratung',
+      title: 'IT-Beratung & Strategie',
       description: 'Professionelle IT-Beratung für optimale Technologieentscheidungen und strategische Ausrichtung Ihres Unternehmens.',
-      icon: '⚙️',
-      color: 'from-scaleit-red to-red-600',
-      link: '/services/beratung',
-      features: ['Technologie-Assessment', 'IT-Strategie', 'Budgetplanung', 'Compliance-Beratung']
+      icon: '/icons/computer_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg',
+      category: 'beratung',
+      features: [
+        'Technologie-Assessment',
+        'IT-Strategie Entwicklung',
+        'Budgetplanung & Kostenoptimierung',
+        'Compliance & Risikoanalyse'
+      ],
+      link: '/services/beratung'
     },
     {
-      id: 'implementation',
-      title: 'Implementation & Deployment',
-      description: 'Reibungslose Implementierung und Bereitstellung von IT-Lösungen mit minimalen Ausfallzeiten.',
-      icon: '🚀',
-      color: 'from-scaleit-red to-red-600',
-      link: '/services/implementation',
-      features: ['System-Migration', 'Software-Rollout', 'Integration', 'Testing & QA']
+      id: 'system-integration',
+      title: 'Systemintegration',
+      description: 'Nahtlose Integration verschiedener IT-Systeme für optimale Effizienz und Datenfluss.',
+      icon: '/icons/hub_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg',
+      category: 'implementation',
+      features: [
+        'API-Entwicklung',
+        'Middleware-Integration',
+        'Datenmigration',
+        'Systemoptimierung'
+      ],
+      link: '/services/implementation'
     },
     {
-      id: 'wartung',
+      id: 'cloud-services',
+      title: 'Cloud-Services',
+      description: 'Professionelle Cloud-Migration und -Management für skalierbare und sichere IT-Infrastruktur.',
+      icon: '/icons/cloud_done_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg',
+      category: 'implementation',
+      features: [
+        'Cloud-Migration',
+        'Infrastructure as Code',
+        'Multi-Cloud-Management',
+        'Security & Compliance'
+      ],
+      link: '/microsoft'
+    },
+    {
+      id: 'wartung-support',
       title: 'Wartung & Support',
-      description: '24/7 Wartung und Support für alle Ihre IT-Systeme mit proaktiver Überwachung und schneller Problemlösung.',
-      icon: '🔧',
-      color: 'from-scaleit-red to-red-600',
-      link: '/services/wartung',
-      features: ['24/7 Monitoring', 'Proaktive Wartung', 'Remote Support', 'Update Management']
+      description: 'Umfassender IT-Support und proaktive Wartung für maximale Systemverfügbarkeit.',
+      icon: '/icons/security_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg',
+      category: 'support',
+      features: [
+        '24/7 Monitoring',
+        'Proaktive Wartung',
+        'Remote-Support',
+        'Notfall-Intervention'
+      ],
+      link: '/services/wartung'
+    },
+    {
+      id: 'projektmanagement',
+      title: 'Projektmanagement',
+      description: 'Professionelles Projektmanagement mit bewährten Methoden und transparenter Kommunikation.',
+      icon: '/icons/timeline_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg',
+      category: 'beratung',
+      features: [
+        'Agile Methoden',
+        'Risikomanagement',
+        'Qualitätssicherung',
+        'Stakeholder-Management'
+      ],
+      link: '/services/projekt'
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity',
+      description: 'Umfassender Schutz Ihrer IT-Infrastruktur vor aktuellen Bedrohungen und Angriffen.',
+      icon: '/icons/verified_user_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg',
+      category: 'support',
+      features: [
+        'Sicherheitsaudits',
+        'Firewall-Management',
+        'Endpoint-Schutz',
+        'Incident-Response'
+      ],
+      link: '/services/wartung'
     }
   ], []);
 
-  const managedServices = useMemo(() => [
-    {
-      id: 'acmp',
-      title: 'ACMP Client Management',
-      description: 'Advanced Client Management Platform für umfassende IT-Asset-Verwaltung und Systemoptimierung.',
-      icon: '🛡️',
-      color: 'from-scaleit-red to-red-600',
-      link: '/acmp',
-      features: ['Asset Management', 'Software Deployment', 'Patch Management', 'Reporting']
-    },
-    {
-      id: 'hornetsecurity',
-      title: 'Hornetsecurity E-Mail Security',
-      description: 'Umfassende E-Mail-Sicherheitslösungen mit Spam-Schutz, Archivierung und Backup-Services.',
-      icon: '📧',
-      color: 'from-scaleit-red to-red-600',
-      link: '/hornetsecurity',
-      features: ['Spam Protection', 'Email Archiving', 'Backup Service', 'Threat Protection']
-    },
-    {
-      id: 'arctic-wolf',
-      title: 'Arctic Wolf Managed Detection',
-      description: 'Professionelle Managed Detection and Response Services für maximale IT-Sicherheit.',
-      icon: '👁️',
-      color: 'from-scaleit-red to-red-600',
-      link: '/arctic-wolf',
-      features: ['24/7 SOC', 'Threat Hunting', 'Incident Response', 'Security Analytics']
-    }
-  ], []);
+  // Gefilterte Services basierend auf aktiver Kategorie
+  const filteredServices = useMemo(() => {
+    if (activeCategory === 'all') return services;
+    return services.filter(service => service.category === activeCategory);
+  }, [activeCategory, services]);
 
-  const enterpriseServices = useMemo(() => [
-    {
-      id: 'microsoft',
-      title: 'Microsoft 365 & Azure',
-      description: 'Vollständige Microsoft Cloud-Lösungen von der Migration bis zur fortlaufenden Optimierung.',
-      icon: '🏢',
-      color: 'from-scaleit-red to-red-600',
-      link: '/microsoft',
-      features: ['Office 365', 'Azure Cloud', 'Teams Setup', 'Security & Compliance']
-    },
-    {
-      id: 'projekt',
-      title: 'IT-Projekte & Migration',
-      description: 'Komplexe IT-Projekte und Migrationen mit professionellem Projektmanagement und bewährten Methoden.',
-      icon: '📊',
-      color: 'from-scaleit-red to-red-600',
-      link: '/projekt',
-      features: ['Projektmanagement', 'Cloud Migration', 'System Integration', 'Change Management']
-    }
-  ], []);
+  // Service-Karte Komponente
+  const ServiceCard = ({ service, index }: {
+    service: typeof services[0],
+    index: number
+  }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="group"
+    >
+      <Link href={service.link}>
+        <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 h-full border border-scaleit-gray/10 hover:border-scaleit-red/20">
+          {/* Icon */}
+          <div className="w-16 h-16 bg-gradient-to-br from-scaleit-red to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <img
+              src={service.icon}
+              alt=""
+              className="w-8 h-8 filter brightness-0 invert"
+              onError={(e) => {
+                // Fallback für fehlende Icons
+                e.currentTarget.style.display = 'none';
+                (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'block';
+              }}
+            />
+            <div className="hidden w-8 h-8 bg-scaleit-gray rounded"></div>
+          </div>
 
-  const stats = useMemo(() => [
-    { label: 'Zufriedene Kunden', value: '600+', icon: '👥' },
-    { label: 'Erfolgreiche Projekte', value: '200+', icon: '✅' },
-    { label: 'Jahre Erfahrung', value: '15+', icon: '🏆' },
-    { label: 'Support Verfügbarkeit', value: '24/7', icon: '🕒' }
-  ], []);
+          {/* Content */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold text-scaleit-black group-hover:text-scaleit-red transition-colors">
+              {service.title}
+            </h3>
 
-  // Service Card Component - optimiert für Performance
-  const ServiceCard = ({ service, index }: { 
-    service: {
-      id: string;
-      title: string;
-      description: string;
-      icon: string;
-      color: string;
-      link: string;
-      features: string[];
-    }, 
-    index: number 
-  }) => {
-    // Memoize hover state für Performance
-    const isHovered = hoveredService === service.id;
-    
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="group relative"
-        onMouseEnter={() => handleMouseEnter(service.id)}
-        onMouseLeave={handleMouseLeave}
-      >
-        <Link href={service.link}>
-          <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${service.color} p-8 h-full min-h-[320px] 
-                         transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer`}>
-            
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-4 right-4 w-32 h-32 rounded-full bg-white/20"></div>
-              <div className="absolute bottom-4 left-4 w-20 h-20 rounded-full bg-white/10"></div>
+            <p className="text-scaleit-gray leading-relaxed">
+              {service.description}
+            </p>
+
+            {/* Features */}
+            <div className="space-y-2">
+              {service.features.map((feature, idx) => (
+                <div key={idx} className="flex items-center text-sm text-scaleit-gray">
+                  <div className="w-2 h-2 bg-scaleit-red rounded-full mr-3 flex-shrink-0"></div>
+                  {feature}
+                </div>
+              ))}
             </div>
 
-            {/* Content */}
-            <div className="relative z-10 h-full flex flex-col">
-              {/* Icon */}
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm text-3xl">
-                  {service.icon}
-                </div>
-              </div>
-
-              {/* Title & Description */}
-              <div className="flex-grow">
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-yellow-200 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-white/90 text-base leading-relaxed mb-6">
-                  {service.description}
-                </p>
-              </div>
-
-              {/* Features */}
-              <div className="space-y-2 mb-6">
-                {service.features.map((feature: string, idx: number) => (
-                  <div key={idx} className="flex items-center text-white/80 text-sm">
-                    <span className="w-4 h-4 mr-2 text-white/60">✓</span>
-                    {feature}
-                  </div>
-                ))}
-              </div>
-
-              {/* Call to Action */}
+            {/* CTA */}
+            <div className="pt-4 border-t border-scaleit-gray/10">
               <div className="flex items-center justify-between">
-                <span className="text-white/80 text-sm font-medium">Mehr erfahren</span>
-                <div className={`w-10 h-10 bg-white/20 rounded-full flex items-center justify-center 
-                               transform transition-transform duration-300 
-                               ${isHovered ? 'translate-x-2' : ''}`}>
-                  <span className="text-white">→</span>
+                <span className="text-scaleit-red font-semibold">Mehr erfahren</span>
+                <div className="w-8 h-8 bg-scaleit-red/10 rounded-full flex items-center justify-center group-hover:bg-scaleit-red group-hover:text-white transition-all duration-300">
+                  <span className="text-scaleit-red group-hover:text-white">→</span>
                 </div>
               </div>
             </div>
           </div>
-        </Link>
-      </motion.div>
-    );
-  };
+        </div>
+      </Link>
+    </motion.div>
+  );
 
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-scaleit-white to-scaleit-gray/10">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-scaleit-red/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-scaleit-gray/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
-      </div>
-
-      <div className="relative z-10">
+      <main className="min-h-screen bg-gradient-to-br from-scaleit-white via-white to-scaleit-gray/5">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -207,121 +188,92 @@ export default function ServicesPage() {
               transition={{ duration: 0.8 }}
               className="mb-12"
             >
-              <div className="inline-flex items-center bg-gradient-scaleit text-white px-8 py-4 rounded-full shadow-2xl mb-8">
-                <span className="mr-3 text-xl">⚙️</span>
-                <span className="font-semibold text-lg">Alle Services im Überblick</span>
+              <div className="inline-flex items-center bg-gradient-to-r from-scaleit-red to-red-600 text-white px-6 py-3 rounded-full mb-8 shadow-lg">
+                <img src="/icons/settings_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg" alt="" className="w-5 h-5 mr-3 filter brightness-0 invert" />
+                <span className="font-semibold">ScaleITS Services</span>
               </div>
 
-              <h1 className="text-6xl md:text-7xl font-bold mb-8">
-                <span className="bg-gradient-to-r from-gray-900 to-red-600 bg-clip-text text-transparent">
-                  Unsere Dienstleistungen
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-scaleit-gray to-scaleit-red bg-clip-text text-transparent">
+                  Professionelle IT-Services
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Umfassende IT-Services für Ihr Unternehmen - von strategischer Beratung über 
-                Managed Services bis hin zu komplexen Enterprise-Lösungen.
+              <p className="text-xl text-scaleit-gray max-w-3xl mx-auto leading-relaxed">
+                Von der strategischen Beratung über die Implementierung bis zum kontinuierlichen Support -
+                wir begleiten Ihr Unternehmen auf dem Weg zur digitalen Exzellenz.
               </p>
             </motion.div>
 
             {/* Stats */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
             >
-              {stats.map((stat, index) => (
+              {[
+                { value: '600+', label: 'Zufriedene Kunden', icon: '/icons/group_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg' },
+                { value: '200+', label: 'Erfolgreiche Projekte', icon: '/icons/emoji_events_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg' },
+                { value: '15+', label: 'Jahre Erfahrung', icon: '/icons/trending_up_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg' },
+                { value: '24/7', label: 'Support-Verfügbarkeit', icon: '/icons/notifications_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg' }
+              ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-scaleit-red to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl">
-                    {stat.icon}
+                  <div className="w-16 h-16 bg-gradient-to-r from-scaleit-red to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <img src={stat.icon} alt="" className="w-7 h-7 filter brightness-0 invert" />
                   </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                  <div className="text-3xl font-bold text-scaleit-black mb-2">{stat.value}</div>
+                  <div className="text-scaleit-gray font-medium">{stat.label}</div>
                 </div>
               ))}
             </motion.div>
           </div>
         </section>
 
-        {/* Core Services */}
-        <section className="py-20 px-4">
+        {/* Category Filter */}
+        <section className="pb-12 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="flex flex-wrap justify-center gap-4"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-scaleit-red to-red-600 bg-clip-text text-transparent">
-                  Core Services
-                </span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Unsere Grundleistungen für eine solide IT-Infrastruktur
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {coreServices.map((service, index) => (
-                <ServiceCard key={service.id} service={service} index={index} />
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                    activeCategory === category.id
+                      ? 'bg-gradient-to-r from-scaleit-red to-red-600 text-white shadow-lg'
+                      : 'bg-white text-scaleit-gray hover:bg-scaleit-gray/10 border border-scaleit-gray/20'
+                  }`}
+                >
+                  <img
+                    src={category.icon}
+                    alt=""
+                    className={`w-5 h-5 mr-3 filter ${
+                      activeCategory === category.id ? 'brightness-0 invert' : 'brightness-0'
+                    }`}
+                  />
+                  {category.name}
+                </button>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* Managed Services */}
-        <section className="py-20 px-4 bg-white/50">
+        {/* Services Grid */}
+        <section className="pb-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              layout
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-scaleit-red to-red-600 bg-clip-text text-transparent">
-                  Managed Services
-                </span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Spezialisierte Managed Services für maximale Sicherheit und Effizienz
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {managedServices.map((service, index) => (
+              {filteredServices.map((service, index) => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Enterprise Services */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-scaleit-red to-red-600 bg-clip-text text-transparent">
-                  Enterprise Solutions
-                </span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Umfassende Enterprise-Lösungen für komplexe Anforderungen
-              </p>
             </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {enterpriseServices.map((service, index) => (
-                <ServiceCard key={service.id} service={service} index={index} />
-              ))}
-            </div>
           </div>
         </section>
 
@@ -332,34 +284,34 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-scaleit rounded-3xl p-12 text-white"
+              className="bg-gradient-to-r from-scaleit-red to-red-600 rounded-3xl p-12 text-white shadow-2xl"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Bereit für den nächsten Schritt?
+                Bereit für Ihre digitale Transformation?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Lassen Sie uns gemeinsam die perfekte IT-Lösung für Ihr Unternehmen finden.
+                Lassen Sie uns gemeinsam die IT-Lösungen entwickeln, die Ihr Unternehmen voranbringen.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" 
-                      className="inline-flex items-center px-8 py-4 bg-white text-scaleit-red rounded-full font-bold text-lg hover:bg-scaleit-gray/10 transition-all duration-300 hover:scale-105">
-                  <span className="mr-3">📞</span>
+                <Link href="/contact"
+                      className="inline-flex items-center px-8 py-4 bg-white text-scaleit-red rounded-full font-bold text-lg hover:bg-scaleit-gray/10 transition-all duration-300 hover:scale-105 shadow-lg">
+                  <img src="/icons/contact_support_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg" alt="" className="w-6 h-6 mr-3 filter brightness-0 invert-0" />
                   Kostenlose Beratung
                 </Link>
-                
-                <Link href="/projekt"
-                      className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-red-600 transition-all duration-300">
-                  <span className="mr-3">📊</span>
+
+                <Link href="/services/projekt"
+                      className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-scaleit-red transition-all duration-300">
+                  <img src="/icons/devices_24dp_5F6368_FILL0_wght200_GRAD0_opsz24.svg" alt="" className="w-6 h-6 mr-3 filter brightness-0 invert" />
                   Projekt starten
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
-      </div>
-    </main>
-    <Footer />
+      </main>
+      <SimplicityBanner />
+      <Footer />
     </>
   );
 }

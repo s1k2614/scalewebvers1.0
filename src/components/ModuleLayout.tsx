@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Navigation from './Navigation';
+import Hero from './Hero';
 import Footer from './Footer';
 import ModuleSidebar from './ModuleSidebar';
 import { Check, ExternalLink, ArrowRight, Shield, Zap, Users, Clock } from 'lucide-react';
@@ -51,7 +51,7 @@ export default function ModuleLayout({
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      <Navigation />
+      <Hero />
 
       <div className="pt-24 pb-20">
         <div className="max-w-7xl mx-auto px-4">

@@ -16,7 +16,7 @@ export default function WartungPage() {
   const maintenanceServices = [
     {
       title: "Proactive Monitoring",
-      description: "24/7 Überwachung Ihrer IT-Infrastruktur mit intelligenten Alerting-Systemen",
+      description: "Überwachung 8-18 Uhr Ihrer IT-Infrastruktur mit intelligenten Alerting-Systemen",
       icon: Monitor,
       features: [
         "Echtzeit-Systemüberwachung",
@@ -155,7 +155,7 @@ export default function WartungPage() {
     { value: "99.9%", label: "System Uptime", icon: TrendingUp },
     { value: "<15min", label: "Avg. Response Time", icon: Clock },
     { value: "75%", label: "Weniger Ausfälle", icon: CheckCircle },
-    { value: "24/7", label: "Monitoring", icon: Eye }
+    { value: "8-18 Uhr", label: "Monitoring", icon: Eye }
   ];
 
   const wartungsProzess = [
@@ -168,7 +168,7 @@ export default function WartungPage() {
     {
       step: "02",
       title: "Continuous Monitoring",
-      description: "24/7 Überwachung mit proaktiven Benachrichtigungen und regelmäßigen Reports",
+      description: "Überwachung 8-18 Uhr mit proaktiven Benachrichtigungen und regelmäßigen Reports",
       duration: "Ongoing"
     },
     {
@@ -231,7 +231,7 @@ export default function WartungPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {wartungsStats.map((stat, index) => {

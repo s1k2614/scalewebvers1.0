@@ -260,7 +260,7 @@ export default function ServicePage() {
               {
                 icon: Clock,
                 title: "Schnelle Reaktion",
-                description: "24/7 Support und kurze Reaktionszeiten"
+                description: "Support 8-18 Uhr und kurze Reaktionszeiten"
               },
               {
                 icon: Shield,

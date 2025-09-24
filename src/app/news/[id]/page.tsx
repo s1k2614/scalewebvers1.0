@@ -32,7 +32,7 @@ export default function NewsDetailPage() {
           <ul>
             <li>IT-Beratung und strategische Planung</li>
             <li>Implementierung und Deployment von IT-Lösungen</li>
-            <li>24/7 Support und Wartung</li>
+            <li>Support 8-18 Uhr und Wartung</li>
             <li>Cybersecurity-Beratung und -Lösungen</li>
           </ul>
 

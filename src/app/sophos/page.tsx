@@ -7,150 +7,284 @@ import Link from 'next/link';
 import {
   Shield, CheckCircle, Star, ArrowRight,
   Zap, Lock, Globe, Network, Cloud, Monitor,
-  Users, Award, ChevronRight
+  Users, Award, ChevronRight, Eye, Brain, Bot,
+  Activity, Target, Layers, Database, AlertTriangle,
+  FileText, Mail, Server, Smartphone, Laptop
 } from 'lucide-react';
 
 export default function SophosPage() {
-  const features = [
-    'Next-Generation Firewall',
-    'Advanced Threat Protection',
-    'Zero-Day Malware Schutz',
-    'SD-WAN Integration',
-    'Cloud-basierte Management',
-    '24/7 Security Updates',
-    'Active Threat Response',
-    'Synchronized Security',
-    'TLS 1.3 Decryption',
-    'Deep Packet Inspection',
-    'Application Boost',
-    'Central Cloud Management'
-  ];
-
-  const benefits = [
-    '99.9% Threat Detection Rate',
-    'Reduzierte Sicherheitsvorfälle um 95%',
-    'Einfache Verwaltung über Cloud',
-    'Skalierbare Lösung für alle Unternehmensgrößen',
-    'Automatische Bedrohungsreaktion',
-    'Nahezu native Performance',
-    'Branchenführende Preis-Leistung',
-    'Umfassende Integration mit Sophos-Ökosystem'
-  ];
-
-  const stats = [
-    { value: '500+', label: 'Implementierte Firewalls', icon: Shield },
-    { value: '99.9%', label: 'Threat Detection Rate', icon: Zap },
-    { value: '24/7', label: 'Security Monitoring', icon: Monitor },
-    { value: '95%', label: 'Weniger Sicherheitsvorfälle', icon: Lock }
-  ];
-
-  const advancedFeatures = [
+  const sophosProducts = [
     {
-      title: 'Active Threat Response',
-      description: 'Stoppt aktive Bedrohungen automatisch und koordiniert die Reaktion mit anderen Sophos-Produkten.',
-      icon: Zap
+      name: 'Endpoint Protection',
+      description: 'Modernste Cybersecurity schützt Ihr Unternehmen und Ihre Daten vor Malware und komplexen Angriffen',
+      icon: Laptop,
+      features: ['Deep Learning AI', 'Behavioral Analysis', 'Exploit Prevention', 'Ransomware Protection']
     },
     {
-      title: 'Xstream Architecture',
-      description: 'Beschleunigt und entlastet wichtigen SaaS-, SD-WAN-, VPN- und Cloud-Traffic auf Hardware- oder Softwareebene.',
-      icon: Network
+      name: 'Network Security',
+      description: 'Next-Gen Firewalls, Access Points und Switches für eine ZTNA-Architektur',
+      icon: Network,
+      features: ['ZTNA Integration', 'SD-WAN', 'Advanced Threat Protection', 'Deep Packet Inspection']
     },
     {
-      title: 'Synchronized Security',
-      description: 'Koordiniert Sicherheitsmaßnahmen über alle Sophos-Produkte hinweg für umfassenden Schutz.',
-      icon: Shield
+      name: 'Managed Detection and Response',
+      description: 'Cybersecurity as a Service mit Schutz 8-18 Uhr vor Ransomware und Datenlecks',
+      icon: Eye,
+      features: ['Monitoring 8-18 Uhr', 'Threat Hunting', 'Incident Response', 'Expert Analysis']
     },
     {
-      title: 'Cloud-basierte Bedrohungsanalyse',
-      description: 'Offloaded Analyse von Bedrohungen in die Cloud für maximale Performance und Sicherheit.',
-      icon: Cloud
+      name: 'Email Security',
+      description: 'Schutz vor Malware, Phishing und Spoofing-Versuchen',
+      icon: Mail,
+      features: ['AI-Powered Detection', 'Sandboxing', 'URL Protection', 'Data Loss Prevention']
+    },
+    {
+      name: 'Cloud Security',
+      description: 'Cloud Workload Protection mit CPSM-Prozessen zur Überwachung von Systemen und Infrastruktur',
+      icon: Cloud,
+      features: ['Multi-Cloud Support', 'Container Security', 'Compliance Monitoring', 'Vulnerability Assessment']
     }
   ];
 
+  const keyStats = [
+    { value: 'Gartner Leader', label: '16 Jahre in Folge', subtitle: 'Endpoint Protection Platforms', icon: Award },
+    { value: '600.000+', label: 'Kunden weltweit', subtitle: 'Vertrauen auf Sophos', icon: Users },
+    { value: '50+', label: 'GenAI & Deep Learning', subtitle: 'Funktionen integriert', icon: Brain },
+    { value: '100+', label: 'Drittanbieter-Integrationen', subtitle: 'Offenes Ökosystem', icon: Layers }
+  ];
+
+  const aiFeatures = [
+    {
+      title: 'Dynamischer Schutz',
+      description: 'Der Schutz wird basierend auf Echtzeiteingaben aktualisiert und adaptive Abwehrmaßnahmen reagieren automatisch auf Bedrohungen.',
+      icon: Activity
+    },
+    {
+      title: 'Modernste KI',
+      description: 'Über 50 GenAI- und Deep Learning-Funktionen verbessern die Abwehr und beschleunigen Security Operations.',
+      icon: Brain
+    },
+    {
+      title: 'Offenes Ökosystem',
+      description: 'Kompatibel mit Produkten von Sophos, Produkten anderer Anbieter oder einer beliebigen Kombination aus beidem.',
+      icon: Globe
+    }
+  ];
+
+  const useCases = [
+    'Ransomware-Angriffe stoppen',
+    'Remote- oder Hybrid-Mitarbeiter schützen',
+    'Cyber-Versicherungsanforderungen erfüllen',
+    'Microsoft-Umgebung schützen',
+    'Compliance sicherstellen',
+    'KI für Cybersecurity nutzen'
+  ];
+
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center bg-gradient-to-r from-red-600 to-red-800 text-white px-6 py-3 rounded-full mb-8">
-              <Shield className="w-6 h-6 mr-3" />
-              <span className="text-lg font-bold">Sophos Firewalls</span>
-            </div>
-
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Next-Generation
-              <span className="block bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
-                Firewall Protection
-              </span>
-            </h1>
-
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              Umfassender Netzwerkschutz mit Advanced Threat Protection, Zero-Day-Schutz und intelligenter Traffic-Analyse.
-              Schützen Sie Ihr Unternehmen vor modernen Cyber-Bedrohungen.
-            </p>
-          </motion.div>
+      {/* Hero Section with Advanced Background */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-48 h-48 bg-indigo-500 rounded-full animate-bounce slow"></div>
+          <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
         </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="pb-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full mb-4">
-                    <IconComponent className="w-8 h-8" />
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow-lg mb-6">
+                <Award className="w-5 h-5 mr-2" />
+                <span className="font-semibold">Gartner Leader 16 Jahre in Folge</span>
+              </div>
+              
+              <h1 className="text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  Sophos
+                </span>
+                <br />
+                <span className="text-gray-900">Cybersecurity</span>
+              </h1>
+              
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Modernste KI-native Cybersecurity-Plattform mit adaptivem Schutz. 
+                Über 600.000 Kunden weltweit vertrauen auf Sophos für umfassende 
+                Sicherheit vor Ransomware und komplexen Bedrohungen.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                >
+                  <Shield className="w-5 h-5 mr-3" />
+                  Kostenlose Beratung
+                </Link>
+                <button className="inline-flex items-center border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300">
+                  <FileText className="w-5 h-5 mr-3" />
+                  Demo anfordern
+                </button>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl p-8 shadow-2xl">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-white">
+                    <Brain className="w-8 h-8 mb-3 text-blue-200" />
+                    <div className="text-2xl font-bold">50+</div>
+                    <div className="text-sm opacity-90">AI Funktionen</div>
                   </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                  <div className="text-gray-600">{stat.label}</div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-white">
+                    <Shield className="w-8 h-8 mb-3 text-blue-200" />
+                    <div className="text-2xl font-bold">8-18 Uhr</div>
+                    <div className="text-sm opacity-90">MDR Service</div>
+                  </div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-white">
+                    <Award className="w-8 h-8 mb-3 text-blue-200" />
+                    <div className="text-2xl font-bold">Leader</div>
+                    <div className="text-sm opacity-90">Gartner 2025</div>
+                  </div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-white">
+                    <Users className="w-8 h-8 mb-3 text-blue-200" />
+                    <div className="text-2xl font-bold">600K+</div>
+                    <div className="text-sm opacity-90">Kunden</div>
+                  </div>
                 </div>
-              );
-            })}
-          </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Advanced Features Section */}
-      <section className="pb-20">
+      {/* Key Statistics */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Erweiterte Sicherheitsfunktionen
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Sophos Firewall bietet mehr als nur Firewall-Funktionalität - es ist das Herzstück der besten Netzwerksicherheitsplattform der Welt.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {advancedFeatures.map((feature, index) => {
-              const IconComponent = feature.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {keyStats.map((stat, index) => {
+              const IconComponent = stat.icon;
               return (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+                  className="text-center group"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-xl flex items-center justify-center mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{stat.value}</h3>
+                  <p className="text-lg font-semibold text-blue-600 mb-1">{stat.label}</p>
+                  <p className="text-sm text-gray-600">{stat.subtitle}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Products Grid */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold text-gray-900 mb-6">
+              Sophos Produktpalette
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Synchronisierte Lösungen für intelligentere, schnellere und effektivere Abwehrmaßnahmen
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sophosProducts.map((product, index) => {
+              const IconComponent = product.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group hover:scale-105"
+                >
+                  <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white">
+                    <IconComponent className="w-12 h-12 mb-4" />
+                    <h3 className="text-xl font-bold mb-2">{product.name}</h3>
+                    <p className="text-blue-100 text-sm">{product.description}</p>
+                  </div>
+                  
+                  <div className="p-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {product.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-700">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Platform Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 px-6 py-3 rounded-full font-semibold mb-6">
+              <Brain className="w-5 h-5 mr-2" />
+              Adaptive, KI-native Cybersecurity-Plattform
+            </div>
+            <h2 className="text-5xl font-bold text-gray-900 mb-6">
+              Sophos Central
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Sophos Central bietet Kunden erstklassigen Schutz und sorgt für mehr Effizienz bei der Abwehr. 
+              Dynamischer Schutz, modernste KI und ein offenes Ökosystem mit vielen Integrationen.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {aiFeatures.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 text-white rounded-full mb-6">
+                    <IconComponent className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                 </motion.div>
               );
@@ -159,140 +293,91 @@ export default function SophosPage() {
         </div>
       </section>
 
-      {/* Technology Highlights */}
-      <section className="pb-20 bg-gray-50">
+      {/* Use Cases */}
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-indigo-700">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Technologie-Highlights
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold text-white mb-6">
+              Wie können wir Ihnen helfen?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Branchenführende Technologien für maximale Sicherheit und Performance
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Sophos löst die wichtigsten Cybersecurity-Herausforderungen moderner Unternehmen
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <Network className="w-10 h-10" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Xstream SD-WAN</h3>
-              <p className="text-gray-600 mb-4">
-                Optimale Netzwerk-Performance, Flexibilität und Resilienz mit der neuesten SD-WAN-Technologie.
-              </p>
-              <ul className="text-left space-y-2">
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Xstream FastPath Beschleunigung
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Performance-basierte Routenoptimierung
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Point-and-Click Orchestrierung
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <Cloud className="w-10 h-10" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud-Integration</h3>
-              <p className="text-gray-600 mb-4">
-                Nahtlose Integration mit Cloud-Sicherheitsdiensten für erweiterten Schutz und Performance.
-              </p>
-              <ul className="text-left space-y-2">
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Network Detection and Response (NDR)
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  DNS Protection
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Zero-Day Threat Protection
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <Monitor className="w-10 h-10" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Central Management</h3>
-              <p className="text-gray-600 mb-4">
-                Einheitliche Cloud-Management-Konsole für alle Sophos-Produkte und -Dienste.
-              </p>
-              <ul className="text-left space-y-2">
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Single Console für alle Produkte
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Cloud-basierte Berichterstattung
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Zero-Touch Deployment
-                </li>
-              </ul>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer group"
+              >
+                <div className="flex items-center">
+                  <Target className="w-6 h-6 text-blue-200 mr-4 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="text-white font-semibold">{useCase}</span>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-red-800">
+      {/* Customer Quote */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Schützen Sie Ihr Netzwerk
-              <span className="block">mit Sophos Firewalls</span>
+            <div className="bg-white rounded-3xl shadow-2xl p-12">
+              <div className="text-5xl text-blue-600 mb-6">"</div>
+              <blockquote className="text-2xl text-gray-700 font-medium mb-8 leading-relaxed">
+                Die Herausforderungen in der IT haben sich im Laufe der Zeit deutlich geändert und sind sehr viel komplexer geworden. 
+                Dank Sophos haben wir trotzdem den Überblick und können effektiv für Cybersicherheit sorgen.
+              </blockquote>
+              <div className="border-t pt-6">
+                <p className="text-lg font-semibold text-gray-900">Stefan Sauerland</p>
+                <p className="text-blue-600">Leiter Systemintegration, Kuchenmeister GmbH</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-5xl font-bold text-white mb-6">
+              Stoppen Sie Bedrohungen rechtzeitig
             </h2>
-            <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-              Lassen Sie uns gemeinsam die optimale Firewall-Lösung für Ihr Unternehmen finden.
-              Unsere zertifizierten Sophos-Experten beraten Sie gerne.
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Mit Sophos erhalten Sie Cybersecurity ohne Kompromisse. Innovative KI gegen Bedrohungen und Experten, denen nichts entgeht.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50"
+                className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50"
               >
                 <Users className="w-5 h-5 mr-3" />
-                Kostenlose Beratung
+                Vertrieb kontaktieren
               </Link>
-              <Link
-                href="/produkte"
-                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
-              >
-                <Network className="w-5 h-5 mr-3" />
-                Alle Produkte
-              </Link>
+              <button className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                <Zap className="w-5 h-5 mr-3" />
+                Kostenlos testen
+              </button>
             </div>
           </motion.div>
         </div>

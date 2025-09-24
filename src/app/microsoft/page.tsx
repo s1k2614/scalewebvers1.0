@@ -669,9 +669,9 @@ export default function MicrosoftPage() {
           <div className="flex justify-center mb-12">
             <div className="bg-gray-100 rounded-lg p-2 flex flex-wrap gap-2">
               {microsoftSolutions.map((solution) => (
-                <Link
+                <button
                   key={solution.id}
-                  href={solution.id === 'office365' ? '/microsoft/office365' : solution.id === 'azure' ? '/microsoft/azure' : '/microsoft/dynamics'}
+                  onClick={() => setActiveTab(solution.id)}
                   className={`px-6 py-3 rounded-md font-semibold transition-all duration-300 ${
                     activeTab === solution.id
                       ? 'bg-white text-red-600 shadow-md'
@@ -680,7 +680,7 @@ export default function MicrosoftPage() {
                 >
                   <solution.icon className="w-5 h-5 inline mr-2" />
                   {solution.name}
-                </Link>
+                </button>
               ))}
             </div>
           </div>

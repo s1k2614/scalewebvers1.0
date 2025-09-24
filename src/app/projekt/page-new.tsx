@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Navigation from '../../components/Navigation';
+import Hero from '../../components/Hero';
 import Footer from '../../components/Footer';
 import { 
   Server, Database, Shield, Cloud, Cpu, Network, Users, 
@@ -63,7 +63,7 @@ export default function ProjektPage() {
         "Schutz kritischer Produktionssysteme",
         "Compliance-Anforderungen einhalten",
         "Minimal invasive Implementation",
-        "24/7 Monitoring etablieren"
+        "Monitoring 8-18 Uhr etablieren"
       ],
       results: [
         "95% weniger Sicherheitsvorfälle",
@@ -105,7 +105,7 @@ export default function ProjektPage() {
       category: "IT-Betrieb",
       duration: "6 Monate",
       team: "6 IT-Spezialisten",
-      description: "Übernahme des kompletten IT-Betriebs mit 24/7 Support und proaktivem Monitoring",
+      description: "Übernahme des kompletten IT-Betriebs mit Support 8-18 Uhr und proaktivem Monitoring",
       technologies: ["ServerEye", "Remote Support", "Backup Solutions", "Asset Management"],
       challenges: [
         "Sensible Rechtsdaten schützen",
@@ -116,7 +116,7 @@ export default function ProjektPage() {
       results: [
         "99.8% System-Verfügbarkeit",
         "Reduzierte IT-Ausfälle um 90%",
-        "24/7 professioneller Support",
+        "Professioneller Support 8-18 Uhr",
         "Vollständige Datenschutz-Compliance"
       ],
       icon: Users,
@@ -296,7 +296,7 @@ export default function ProjektPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-red-50 to-indigo-100">
-      <Navigation />
+      <Hero />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -541,7 +541,7 @@ export default function ProjektPage() {
                       { service: "Server Monitoring", status: "Online", uptime: "99.8%" },
                       { service: "Backup Services", status: "Running", uptime: "100%" },
                       { service: "Security Scanning", status: "Active", uptime: "99.9%" },
-                      { service: "Help Desk", status: "Available", uptime: "24/7" }
+                      { service: "Help Desk", status: "Available", uptime: "8-18 Uhr" }
                     ].map((item, index) => (
                       <motion.div
                         key={item.service}

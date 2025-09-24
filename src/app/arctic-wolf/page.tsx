@@ -42,7 +42,7 @@ export default function ArcticWolfPage() {
       id: 'soc',
       name: 'Managed Detection & Response',
       icon: Eye,
-      color: 'from-scaleit-red to-red-600',
+      color: 'from-red-600 to-red-400',
       description: '24/7 SOC-as-a-Service mit Expertenkriminalisten',
       features: [
         'Kontinuierliche Bedrohungsüberwachung',
@@ -63,7 +63,7 @@ export default function ArcticWolfPage() {
       id: 'incident-response',
       name: 'Incident Response',
       icon: Zap,
-      color: 'from-scaleit-red to-red-600',
+      color: 'from-red-600 to-orange-600',
       description: 'Sofortige Reaktion auf Sicherheitsvorfälle',
       features: [
         'Automatisierte Eindämmung',
@@ -84,7 +84,7 @@ export default function ArcticWolfPage() {
       id: 'threat-intelligence',
       name: 'Threat Intelligence',
       icon: Brain,
-      color: 'from-scaleit-red to-red-600',
+      color: 'from-purple-600 to-pink-600',
       description: 'Proaktive Bedrohungserkennung durch KI',
       features: [
         'Machine Learning Detection',
@@ -105,7 +105,7 @@ export default function ArcticWolfPage() {
       id: 'security-awareness',
       name: 'Security Awareness',
       icon: Users,
-      color: 'from-scaleit-red to-red-600',
+      color: 'from-green-600 to-teal-600',
       description: 'Mitarbeiterschulung und Phishing-Simulation',
       features: [
         'Phishing-Simulationen',
@@ -212,10 +212,10 @@ export default function ArcticWolfPage() {
       <div className="relative w-full h-96 bg-gradient-to-br from-red-900 via-gray-900 to-indigo-900 rounded-3xl overflow-hidden shadow-2xl">
         {/* Animated background */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-scaleit-red/10 to-red-600/10"></div>
-          <div className="absolute top-10 left-10 w-32 h-32 bg-scaleit-red/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-40 h-40 bg-red-600/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-scaleit-red/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-500/10 to-cyan-500/10"></div>
+          <div className="absolute top-10 left-10 w-32 h-32 bg-red-500/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-cyan-500/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-purple-500/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
         
         {/* Grid pattern */}
@@ -383,9 +383,9 @@ export default function ArcticWolfPage() {
         <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
           <motion.div 
             className={`h-full rounded-full transition-all duration-1000 ${
-              threatLevel >= 4 ? 'bg-gradient-to-r from-red-600 to-red-700' : 
-              threatLevel >= 3 ? 'bg-gradient-to-r from-red-500 to-red-600' : 
-              threatLevel >= 2 ? 'bg-gradient-to-r from-red-400 to-red-500' : 'bg-gradient-to-r from-red-300 to-red-400'
+              threatLevel >= 4 ? 'bg-gradient-to-r from-red-500 to-red-600' : 
+              threatLevel >= 3 ? 'bg-gradient-to-r from-orange-500 to-orange-600' : 
+              threatLevel >= 2 ? 'bg-gradient-to-r from-yellow-500 to-yellow-600' : 'bg-gradient-to-r from-green-500 to-green-600'
             }`}
             style={{ width: `${threatLevel * 25}%` }}
             initial={{ width: 0 }}
@@ -562,7 +562,7 @@ export default function ArcticWolfPage() {
       {/* Live Threat Map Section */}
       <section className="py-24 bg-gradient-to-br from-gray-900 to-red-900 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-scaleit-red/5 to-red-600/5"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-500/5 to-cyan-500/5"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 relative z-10">

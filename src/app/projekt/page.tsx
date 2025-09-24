@@ -47,7 +47,7 @@ function ProjektPage() {
         "Erhöhte Mitarbeiterzufriedenheit"
       ],
       icon: Mail,
-      color: "from-scaleit-red to-red-600"
+      color: "from-red-500 to-cyan-500"
     },
     {
       id: 1,
@@ -62,7 +62,7 @@ function ProjektPage() {
         "Schutz kritischer Produktionssysteme",
         "Compliance-Anforderungen einhalten",
         "Minimal invasive Implementation",
-        "24/7 Monitoring etablieren"
+        "Monitoring 8-18 Uhr etablieren"
       ],
       results: [
         "95% weniger Sicherheitsvorfälle",
@@ -71,7 +71,7 @@ function ProjektPage() {
         "Zentrale Security-Verwaltung"
       ],
       icon: Shield,
-      color: "from-scaleit-red to-red-600"
+      color: "from-red-500 to-pink-500"
     },
     {
       id: 2,
@@ -95,7 +95,7 @@ function ProjektPage() {
         "Proaktive Fehlererkennung"
       ],
       icon: Settings,
-      color: "from-scaleit-red to-red-600"
+      color: "from-red-500 to-orange-500"
     },
     {
       id: 3,
@@ -104,7 +104,7 @@ function ProjektPage() {
       category: "IT-Betrieb",
       duration: "6 Monate",
       team: "6 IT-Spezialisten",
-      description: "Übernahme des kompletten IT-Betriebs mit 24/7 Support und proaktivem Monitoring",
+      description: "Übernahme des kompletten IT-Betriebs mit Support 8-18 Uhr und proaktivem Monitoring",
       technologies: ["ServerEye", "Remote Support", "Backup Solutions", "Asset Management"],
       challenges: [
         "Sensible Rechtsdaten schützen",
@@ -115,11 +115,11 @@ function ProjektPage() {
       results: [
         "99.8% System-Verfügbarkeit",
         "Reduzierte IT-Ausfälle um 90%",
-        "24/7 professioneller Support",
+        "Professioneller Support 8-18 Uhr",
         "Vollständige Datenschutz-Compliance"
       ],
       icon: Users,
-      color: "from-scaleit-red to-red-600"
+      color: "from-purple-500 to-indigo-500"
     }
   ];
 
@@ -129,28 +129,28 @@ function ProjektPage() {
       description: "Analyse und Optimierung Ihrer IT-Landschaft",
       icon: Target,
       projects: "25+ Projekte",
-      color: "from-scaleit-red to-red-600"
+      color: "from-red-500 to-cyan-500"
     },
     {
       title: "Cloud Migrationen",
       description: "Sichere Migration in moderne Cloud-Umgebungen",
       icon: Cloud,
       projects: "40+ Migrationen",
-      color: "from-scaleit-red to-red-600"
+      color: "from-green-500 to-emerald-500"
     },
     {
       title: "Security Implementation",
       description: "Umfassende IT-Sicherheitslösungen",
       icon: Shield,
       projects: "60+ Security-Projekte",
-      color: "from-scaleit-red to-red-600"
+      color: "from-red-500 to-pink-500"
     },
     {
       title: "Automatisierung",
       description: "Prozessautomatisierung und Standardisierung",
       icon: Zap,
       projects: "35+ Automatisierungen",
-      color: "from-scaleit-red to-red-600"
+      color: "from-purple-500 to-indigo-500"
     }
   ];
 
@@ -162,7 +162,7 @@ function ProjektPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-red-500/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-96 h-96 bg-red-600/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-purple-800/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -400,7 +400,7 @@ function ProjektPage() {
                   <div className="text-sm opacity-75">Completion</div>
                 </div>
                 <div className="bg-white/10 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-red-400">24/7</div>
+                  <div className="text-2xl font-bold text-red-400">8-18 Uhr</div>
                   <div className="text-sm opacity-75">Support</div>
                 </div>
               </div>
@@ -426,10 +426,10 @@ function ProjektPage() {
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { number: "600+", label: "Zufriedene Kunden", icon: Users, color: "from-scaleit-red to-red-600" },
-              { number: "160+", label: "Erfolgreiche Projekte", icon: CheckCircle, color: "from-scaleit-red to-red-600" },
-              { number: "3", label: "Jahre Erfahrung", icon: Calendar, color: "from-scaleit-red to-red-600" },
-              { number: "99.8%", label: "Kundenzufriedenheit", icon: Award, color: "from-scaleit-red to-red-600" }
+              { number: "600+", label: "Zufriedene Kunden", icon: Users, color: "from-red-500 to-cyan-500" },
+              { number: "160+", label: "Erfolgreiche Projekte", icon: CheckCircle, color: "from-green-500 to-emerald-500" },
+              { number: "3", label: "Jahre Erfahrung", icon: Calendar, color: "from-purple-500 to-indigo-500" },
+              { number: "99.8%", label: "Kundenzufriedenheit", icon: Award, color: "from-yellow-500 to-orange-500" }
             ].map((stat, index) => (
               <motion.div
                 key={index}

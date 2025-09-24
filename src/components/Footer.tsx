@@ -86,13 +86,13 @@ export default function Footer() {
             © 2025 ScaleITS. Alle Rechte vorbehalten.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-scaleit-gray hover:text-scaleit-red text-sm transition-colors">
+            <Link href="/datenschutz" className="text-scaleit-gray hover:text-scaleit-red text-sm transition-colors">
               Datenschutz
             </Link>
             <Link href="/imprint" className="text-scaleit-gray hover:text-scaleit-red text-sm transition-colors">
               Impressum
             </Link>
-            <Link href="/terms" className="text-scaleit-gray hover:text-scaleit-red text-sm transition-colors">
+            <Link href="/agbs" className="text-scaleit-gray hover:text-scaleit-red text-sm transition-colors">
               AGB
             </Link>
           </div>

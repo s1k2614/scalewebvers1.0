@@ -405,34 +405,34 @@ export default function ACMPIndividualPage() {
                         transition={{ duration: 0.5 }}
                         className="overflow-hidden"
                       >
-                        <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
-                          <div className="flex items-center mb-6">
-                            <div className={`p-4 rounded-2xl bg-gradient-to-r ${activeModuleInRow.color} mr-6`}>
-                              {React.createElement(activeModuleInRow.icon, { className: "w-8 h-8 text-white" })}
+                        <div className="bg-white rounded-2xl shadow-2xl p-6 border border-gray-200">
+                          <div className="flex items-center mb-4">
+                            <div className={`p-3 rounded-xl bg-gradient-to-r ${activeModuleInRow.color} mr-4`}>
+                              {React.createElement(activeModuleInRow.icon, { className: "w-6 h-6 text-white" })}
                             </div>
                             <div className="flex-grow">
-                              <h3 className="text-3xl font-bold text-scaleit-black mb-2">{activeModuleInRow.name}</h3>
-                              <p className="text-lg text-scaleit-gray">{activeModuleInRow.description}</p>
+                              <h3 className="text-2xl font-bold text-scaleit-black mb-1">{activeModuleInRow.name}</h3>
+                              <p className="text-base text-scaleit-gray">{activeModuleInRow.description}</p>
                             </div>
                             <button
                               onClick={() => setActiveModule('')}
                               className="ml-4 p-2 rounded-full hover:bg-gray-100 transition-colors"
                             >
-                              <X className="w-6 h-6 text-scaleit-gray" />
+                              <X className="w-5 h-5 text-scaleit-gray" />
                             </button>
                           </div>
 
-                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                             {/* Features */}
                             <div>
-                              <h4 className="text-xl font-semibold text-scaleit-black mb-4 flex items-center">
-                                <CheckCircle className="w-5 h-5 text-scaleit-red mr-2" />
+                              <h4 className="text-lg font-semibold text-scaleit-black mb-3 flex items-center">
+                                <CheckCircle className="w-4 h-4 text-scaleit-red mr-2" />
                                 Features
                               </h4>
-                              <ul className="space-y-2">
+                              <ul className="space-y-1">
                                 {activeModuleInRow.features.map((feature, idx) => (
-                                  <li key={idx} className="flex items-center text-scaleit-gray">
-                                    <CheckCircle className="w-4 h-4 text-scaleit-red mr-3 flex-shrink-0" />
+                                  <li key={idx} className="flex items-center text-scaleit-gray text-sm">
+                                    <CheckCircle className="w-3 h-3 text-scaleit-red mr-2 flex-shrink-0" />
                                     {feature}
                                   </li>
                                 ))}
@@ -441,40 +441,40 @@ export default function ACMPIndividualPage() {
 
                             {/* Module Visualization */}
                             <div>
-                              <h4 className="text-xl font-semibold text-scaleit-black mb-4 flex items-center">
-                                <Eye className="w-5 h-5 text-scaleit-red mr-2" />
+                              <h4 className="text-lg font-semibold text-scaleit-black mb-3 flex items-center">
+                                <Eye className="w-4 h-4 text-scaleit-red mr-2" />
                                 Funktionsweise
                               </h4>
-                              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 min-h-[200px] flex items-center justify-center">
+                              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-4 min-h-[120px] flex items-center justify-center">
                                 {/* Individual Module Graphics */}
                                 {activeModuleInRow.id === 'ad-logon-timestamp' && (
-                                  <div className="text-center space-y-4">
+                                  <div className="text-center space-y-3">
                                     {/* AD Logon Timestamp Display */}
-                                    <div className="grid grid-cols-2 gap-4">
-                                      <div className="p-3 bg-blue-100 rounded-lg">
-                                        <Users className="w-6 h-6 text-blue-600 mx-auto mb-1" />
+                                    <div className="grid grid-cols-2 gap-2">
+                                      <div className="p-2 bg-blue-100 rounded">
+                                        <Users className="w-4 h-4 text-blue-600 mx-auto mb-1" />
                                         <div className="text-xs text-blue-700 font-medium">Aktive User</div>
                                         <div className="text-sm font-bold text-blue-800">142</div>
                                       </div>
-                                      <div className="p-3 bg-green-100 rounded-lg">
-                                        <Clock className="w-6 h-6 text-green-600 mx-auto mb-1" />
+                                      <div className="p-2 bg-green-100 rounded">
+                                        <Clock className="w-4 h-4 text-green-600 mx-auto mb-1" />
                                         <div className="text-xs text-green-700 font-medium">Letzte Woche</div>
                                         <div className="text-sm font-bold text-green-800">98%</div>
                                       </div>
-                                      <div className="p-3 bg-orange-100 rounded-lg">
-                                        <AlertTriangle className="w-6 h-6 text-orange-600 mx-auto mb-1" />
+                                      <div className="p-2 bg-orange-100 rounded">
+                                        <AlertTriangle className="w-4 h-4 text-orange-600 mx-auto mb-1" />
                                         <div className="text-xs text-orange-700 font-medium">Inaktive</div>
                                         <div className="text-sm font-bold text-orange-800">23</div>
                                       </div>
-                                      <div className="p-3 bg-purple-100 rounded-lg">
-                                        <TrendingUp className="w-6 h-6 text-purple-600 mx-auto mb-1" />
+                                      <div className="p-2 bg-purple-100 rounded">
+                                        <TrendingUp className="w-4 h-4 text-purple-600 mx-auto mb-1" />
                                         <div className="text-xs text-purple-700 font-medium">Trend</div>
                                         <div className="text-sm font-bold text-purple-800">+12%</div>
                                       </div>
                                     </div>
 
                                     {/* Key Features */}
-                                    <div className="flex justify-center space-x-4 text-xs">
+                                    <div className="flex justify-center space-x-2 text-xs">
                                       <div className="flex items-center text-blue-600">
                                         <Shield className="w-3 h-3 mr-1" />
                                         Security Audit
@@ -489,17 +489,17 @@ export default function ACMPIndividualPage() {
                                       </div>
                                     </div>
 
-                                    <p className="text-xs text-scaleit-gray font-medium">Vollständige AD-Login Überwachung und Analyse</p>
+                                    <p className="text-xs text-scaleit-gray font-medium">Vollständige AD-Login Überwachung</p>
                                   </div>
                                 )}
 
                                 {activeModuleInRow.id === 'bitlocker-management' && (
-                                  <div className="text-center space-y-6">
+                                  <div className="text-center space-y-3">
                                     {/* BitLocker Management Dashboard */}
-                                    <div className="space-y-4">
-                                      <div className="bg-white rounded-lg p-4 shadow-sm">
+                                    <div className="space-y-2">
+                                      <div className="bg-white rounded p-3 shadow-sm">
                                         <div className="text-sm font-bold text-gray-700 mb-2">BitLocker Status</div>
-                                        <div className="grid grid-cols-2 gap-4 text-xs">
+                                        <div className="grid grid-cols-2 gap-2 text-xs">
                                           <div className="text-center">
                                             <div className="text-lg font-bold text-green-600">89%</div>
                                             <div className="text-gray-500">Verschlüsselt</div>
@@ -511,44 +511,44 @@ export default function ACMPIndividualPage() {
                                         </div>
                                       </div>
 
-                                      <div className="bg-white rounded-lg p-4 shadow-sm">
+                                      <div className="bg-white rounded p-3 shadow-sm">
                                         <div className="text-sm font-bold text-gray-700 mb-2">Recovery Keys</div>
                                         <div className="flex items-center justify-center">
-                                          <Shield className="w-8 h-8 text-green-500 mr-2" />
+                                          <Shield className="w-6 h-6 text-green-500 mr-2" />
                                           <span className="text-sm text-green-700">Gesichert</span>
                                         </div>
                                       </div>
                                     </div>
 
-                                    <p className="text-sm text-scaleit-gray font-medium">Zentrale BitLocker-Verschlüsselung und Key-Management</p>
+                                    <p className="text-xs text-scaleit-gray font-medium">Zentrale BitLocker-Verschlüsselung</p>
                                   </div>
                                 )}
 
                                 {activeModuleInRow.id === 'password-reset' && (
-                                  <div className="text-center space-y-6">
+                                  <div className="text-center space-y-3">
                                     {/* Password Reset Portal */}
-                                    <div className="bg-gradient-to-br from-blue-50 to-cyan-100 rounded-xl p-4">
-                                      <div className="text-sm font-bold text-cyan-700 mb-3">Self-Service Portal</div>
+                                    <div className="bg-gradient-to-br from-blue-50 to-cyan-100 rounded p-3">
+                                      <div className="text-sm font-bold text-cyan-700 mb-2">Self-Service Portal</div>
 
                                       {/* Reset Process */}
-                                      <div className="space-y-4">
-                                        <div className="flex items-center justify-center space-x-3">
-                                          <div className="p-3 bg-blue-500 rounded-lg shadow-lg">
-                                            <Users className="w-6 h-6 text-white" />
+                                      <div className="space-y-2">
+                                        <div className="flex items-center justify-center space-x-2">
+                                          <div className="p-2 bg-blue-500 rounded shadow">
+                                            <Users className="w-4 h-4 text-white" />
                                           </div>
-                                          <ArrowRight className="w-6 h-6 text-scaleit-gray" />
-                                          <div className="p-3 bg-green-500 rounded-lg shadow-lg">
-                                            <Key className="w-6 h-6 text-white" />
+                                          <ArrowRight className="w-4 h-4 text-scaleit-gray" />
+                                          <div className="p-2 bg-green-500 rounded shadow">
+                                            <Key className="w-4 h-4 text-white" />
                                           </div>
-                                          <ArrowRight className="w-6 h-6 text-scaleit-gray" />
-                                          <div className="p-3 bg-purple-500 rounded-lg shadow-lg">
-                                            <CheckCircle className="w-6 h-6 text-white" />
+                                          <ArrowRight className="w-4 h-4 text-scaleit-gray" />
+                                          <div className="p-2 bg-purple-500 rounded shadow">
+                                            <CheckCircle className="w-4 h-4 text-white" />
                                           </div>
                                         </div>
 
                                         {/* Statistics */}
-                                        <div className="bg-white rounded-lg p-3 shadow-sm">
-                                          <div className="text-sm font-bold text-gray-700 mb-2">Reset-Statistiken</div>
+                                        <div className="bg-white rounded p-2 shadow-sm">
+                                          <div className="text-sm font-bold text-gray-700 mb-1">Reset-Statistiken</div>
                                           <div className="grid grid-cols-2 gap-2 text-xs">
                                             <div className="text-center">
                                               <div className="text-lg font-bold text-blue-600">247</div>
@@ -563,50 +563,50 @@ export default function ACMPIndividualPage() {
                                       </div>
                                     </div>
 
-                                    <p className="text-sm text-scaleit-gray font-medium">Self-Service Passwort-Reset ohne VPN</p>
+                                    <p className="text-xs text-scaleit-gray font-medium">Self-Service Passwort-Reset</p>
                                   </div>
                                 )}
 
                                 {activeModuleInRow.id === 'software-assignment' && (
-                                  <div className="text-center space-y-6">
+                                  <div className="text-center space-y-3">
                                     {/* Software Assignment Interface */}
-                                    <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-4">
-                                      <div className="text-sm font-bold text-emerald-700 mb-3">Software Assignment</div>
+                                    <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded p-3">
+                                      <div className="text-sm font-bold text-emerald-700 mb-2">Software Assignment</div>
 
                                       {/* Assignment Process */}
-                                      <div className="space-y-4">
-                                        <div className="bg-white rounded-lg p-3 shadow-sm">
-                                          <div className="text-sm font-bold text-gray-700 mb-2">Zuweisungs-Status</div>
-                                          <div className="space-y-2">
+                                      <div className="space-y-2">
+                                        <div className="bg-white rounded p-2 shadow-sm">
+                                          <div className="text-sm font-bold text-gray-700 mb-1">Zuweisungs-Status</div>
+                                          <div className="space-y-1">
                                             <div className="flex items-center justify-between">
-                                              <div className="flex items-center space-x-2">
+                                              <div className="flex items-center space-x-1">
                                                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                                                 <span className="text-xs">Microsoft Office</span>
                                               </div>
-                                              <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Assigned</span>
+                                              <span className="text-xs bg-green-100 text-green-700 px-1 py-0.5 rounded">Assigned</span>
                                             </div>
                                             <div className="flex items-center justify-between">
-                                              <div className="flex items-center space-x-2">
+                                              <div className="flex items-center space-x-1">
                                                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
                                                 <span className="text-xs">Adobe Creative Suite</span>
                                               </div>
-                                              <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">Installing</span>
+                                              <span className="text-xs bg-blue-100 text-blue-700 px-1 py-0.5 rounded">Installing</span>
                                             </div>
                                           </div>
                                         </div>
 
                                         {/* Auto-Reinstall */}
-                                        <div className="bg-white rounded-lg p-3 shadow-sm">
-                                          <div className="text-sm font-bold text-gray-700 mb-2">Auto-Reinstall</div>
+                                        <div className="bg-white rounded p-2 shadow-sm">
+                                          <div className="text-sm font-bold text-gray-700 mb-1">Auto-Reinstall</div>
                                           <div className="flex items-center justify-center">
-                                            <RefreshCw className="w-8 h-8 text-green-500 mr-2" />
-                                            <span className="text-sm text-green-700">Aktiviert</span>
+                                            <RefreshCw className="w-4 h-4 text-green-500 mr-1" />
+                                            <span className="text-xs text-green-700">Aktiviert</span>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
 
-                                    <p className="text-sm text-scaleit-gray font-medium">Intelligente Software-Zuweisung und automatische Reinstallation</p>
+                                    <p className="text-xs text-scaleit-gray font-medium">Intelligente Software-Zuweisung</p>
                                   </div>
                                 )}
 
@@ -660,23 +660,23 @@ export default function ACMPIndividualPage() {
                                 )}
 
                                 {activeModuleInRow.id === 'printer-management' && (
-                                  <div className="text-center space-y-6">
+                                  <div className="text-center space-y-3">
                                     {/* Printer Management */}
-                                    <div className="bg-gradient-to-br from-orange-50 to-amber-100 rounded-xl p-4">
-                                      <div className="text-sm font-bold text-amber-700 mb-3">Netzwerkdrucker-Verwaltung</div>
+                                    <div className="bg-gradient-to-br from-orange-50 to-amber-100 rounded p-3">
+                                      <div className="text-sm font-bold text-amber-700 mb-2">Netzwerkdrucker-Verwaltung</div>
 
                                       {/* Building Plan */}
-                                      <div className="space-y-4">
-                                        <div className="bg-white rounded-lg p-3 shadow-sm">
-                                          <div className="text-sm font-bold text-gray-700 mb-2">Gebäudeplan</div>
-                                          <div className="grid grid-cols-2 gap-4">
+                                      <div className="space-y-2">
+                                        <div className="bg-white rounded p-2 shadow-sm">
+                                          <div className="text-sm font-bold text-gray-700 mb-1">Gebäudeplan</div>
+                                          <div className="grid grid-cols-2 gap-2">
                                             <div className="p-2 bg-blue-100 rounded text-center">
-                                              <Building className="w-6 h-6 text-blue-600 mx-auto mb-1" />
+                                              <Building className="w-4 h-4 text-blue-600 mx-auto mb-1" />
                                               <div className="text-xs text-blue-700">Hauptgebäude</div>
                                               <div className="text-sm font-bold text-blue-800">12 Drucker</div>
                                             </div>
                                             <div className="p-2 bg-green-100 rounded text-center">
-                                              <Building className="w-6 h-6 text-green-600 mx-auto mb-1" />
+                                              <Building className="w-4 h-4 text-green-600 mx-auto mb-1" />
                                               <div className="text-xs text-green-700">Nebengebäude</div>
                                               <div className="text-sm font-bold text-green-800">8 Drucker</div>
                                             </div>
@@ -684,37 +684,31 @@ export default function ACMPIndividualPage() {
                                         </div>
 
                                         {/* Connection Status */}
-                                        <div className="bg-white rounded-lg p-3 shadow-sm">
-                                          <div className="text-sm font-bold text-gray-700 mb-2">Verbindungsstatus</div>
-                                          <div className="flex justify-center space-x-2">
-                                            <div className="flex items-center text-green-600 text-xs">
-                                              <Wifi className="w-3 h-3 mr-1" />
-                                              Online: 18
-                                            </div>
-                                            <div className="flex items-center text-orange-600 text-xs">
-                                              <AlertTriangle className="w-3 h-3 mr-1" />
-                                              Offline: 2
-                                            </div>
+                                        <div className="bg-white rounded p-2 shadow-sm">
+                                          <div className="text-sm font-bold text-gray-700 mb-1">Verbindungsstatus</div>
+                                          <div className="flex items-center justify-center">
+                                            <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                            <span className="text-xs text-green-700">20/20 Online</span>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
 
-                                    <p className="text-sm text-scaleit-gray font-medium">Grafische Netzwerkdrucker-Verwaltung</p>
+                                    <p className="text-xs text-scaleit-gray font-medium">Grafische Drucker-Verwaltung</p>
                                   </div>
                                 )}
 
                                 {/* Default visualization for other modules */}
                                 {!activeModuleInRow.comingSoon && !['ad-logon-timestamp', 'bitlocker-management', 'password-reset', 'software-assignment', 'o365-license-management', 'printer-management'].includes(activeModuleInRow.id) && (
-                                  <div className="text-center space-y-6">
-                                    <div className="p-8 bg-gradient-to-r from-scaleit-gray to-scaleit-red rounded-xl">
-                                      <div className={`p-6 rounded-full bg-gradient-to-r ${activeModuleInRow.color} mx-auto w-fit`}>
-                                        {React.createElement(activeModuleInRow.icon, { className: "w-12 h-12 text-white" })}
+                                  <div className="text-center space-y-3">
+                                    <div className="p-4 bg-gradient-to-r from-scaleit-gray to-scaleit-red rounded">
+                                      <div className={`p-3 rounded-full bg-gradient-to-r ${activeModuleInRow.color} mx-auto w-fit`}>
+                                        {React.createElement(activeModuleInRow.icon, { className: "w-6 h-6 text-white" })}
                                       </div>
-                                      <h4 className="text-xl font-bold text-white mt-4 mb-2">{activeModuleInRow.name}</h4>
-                                      <p className="text-white/80 text-sm">Professionelle {activeModuleInRow.name.toLowerCase()} Lösung</p>
+                                      <h4 className="text-lg font-bold text-white mt-2 mb-1">{activeModuleInRow.name}</h4>
+                                      <p className="text-white/80 text-xs">Professionelle Lösung</p>
                                     </div>
-                                    <p className="text-sm text-scaleit-gray font-medium">Modul-Details werden geladen...</p>
+                                    <p className="text-xs text-scaleit-gray font-medium">Modul-Details verfügbar</p>
                                   </div>
                                 )}
                               </div>
@@ -722,16 +716,16 @@ export default function ACMPIndividualPage() {
                           </div>
 
                           {/* Details anschauen Button */}
-                          <div className="mt-8 pt-6 border-t border-gray-200">
+                          <div className="mt-4 pt-4 border-t border-gray-200">
                             <div className="flex justify-center">
                               <Link href={`/acmp-individual/${activeModuleInRow.id}`}>
                                 <motion.button
                                   whileHover={{ scale: 1.05 }}
                                   whileTap={{ scale: 0.95 }}
-                                  className="inline-flex items-center bg-gradient-to-r from-scaleit-red to-scaleit-purple text-white px-8 py-3 rounded-full font-semibold text-lg hover:from-scaleit-red/90 hover:to-scaleit-purple/90 transition-all duration-300 shadow-xl"
+                                  className="inline-flex items-center bg-gradient-to-r from-scaleit-red to-scaleit-purple text-white px-6 py-2 rounded-full font-semibold text-base hover:from-scaleit-red/90 hover:to-scaleit-purple/90 transition-all duration-300 shadow-lg"
                                 >
                                   Details anschauen
-                                  <ArrowRight className="w-5 h-5 ml-2" />
+                                  <ArrowRight className="w-4 h-4 ml-2" />
                                 </motion.button>
                               </Link>
                             </div>
@@ -745,6 +739,138 @@ export default function ACMPIndividualPage() {
             })}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Custom Client Commands Service Section */}
+      <section className="py-20 bg-gradient-to-r from-scaleit-gray/5 to-scaleit-red/5">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-scaleit-red to-scaleit-purple bg-clip-text text-transparent mb-6">
+              Individuelle Client Commands
+            </h2>
+            <p className="text-xl text-scaleit-gray max-w-4xl mx-auto">
+              Alle unsere Client Commands werden speziell für Ihre Projekte und individuelle Anforderungen entwickelt
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100 hover:shadow-3xl transition-all duration-300"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                {/* Content */}
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="p-4 bg-gradient-to-r from-scaleit-red to-scaleit-purple rounded-2xl">
+                      <Code className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-scaleit-black mb-2">
+                        Maßgeschneiderte Lösungen
+                      </h3>
+                      <p className="text-scaleit-gray text-lg">
+                        Ihr Service-Angebot
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-scaleit-red mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-scaleit-black mb-1">Projektbezogene Entwicklung</h4>
+                        <p className="text-scaleit-gray text-sm">Jeder Client Command wird speziell für Ihre Projekte entwickelt und angepasst</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-scaleit-red mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-scaleit-black mb-1">Individuelle Anforderungen</h4>
+                        <p className="text-scaleit-gray text-sm">Berücksichtigung spezifischer Kundenanforderungen und Unternehmensprozesse</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-scaleit-red mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-scaleit-black mb-1">Professionelle Integration</h4>
+                        <p className="text-scaleit-gray text-sm">Nahtlose Integration in bestehende IT-Infrastrukturen und Workflows</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-scaleit-red mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-scaleit-black mb-1">Qualitätssicherung</h4>
+                        <p className="text-scaleit-gray text-sm">Umfassende Tests und Dokumentation für höchste Zuverlässigkeit</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-6">
+                    <Link href="/contact">
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="inline-flex items-center bg-gradient-to-r from-scaleit-red to-scaleit-purple text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-scaleit-red/90 hover:to-scaleit-purple/90 transition-all duration-300 shadow-xl"
+                      >
+                        Individuelle Lösung anfragen
+                        <ArrowRight className="w-5 h-5 ml-3" />
+                      </motion.button>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Visual */}
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-scaleit-gray/10 to-scaleit-red/10 rounded-2xl p-8">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center p-4 bg-white/50 rounded-xl backdrop-blur-sm">
+                        <Settings className="w-8 h-8 text-scaleit-red mx-auto mb-2" />
+                        <div className="text-sm font-semibold text-scaleit-black">Custom Development</div>
+                        <div className="text-xs text-scaleit-gray">Maßgeschneiderte Entwicklung</div>
+                      </div>
+
+                      <div className="text-center p-4 bg-white/50 rounded-xl backdrop-blur-sm">
+                        <Target className="w-8 h-8 text-scaleit-purple mx-auto mb-2" />
+                        <div className="text-sm font-semibold text-scaleit-black">Project Based</div>
+                        <div className="text-xs text-scaleit-gray">Projektbezogen</div>
+                      </div>
+
+                      <div className="text-center p-4 bg-white/50 rounded-xl backdrop-blur-sm">
+                        <Shield className="w-8 h-8 text-scaleit-red mx-auto mb-2" />
+                        <div className="text-sm font-semibold text-scaleit-black">Quality Assured</div>
+                        <div className="text-xs text-scaleit-gray">Qualitätsgesichert</div>
+                      </div>
+
+                      <div className="text-center p-4 bg-white/50 rounded-xl backdrop-blur-sm">
+                        <Users className="w-8 h-8 text-scaleit-purple mx-auto mb-2" />
+                        <div className="text-sm font-semibold text-scaleit-black">Client Focused</div>
+                        <div className="text-xs text-scaleit-gray">Kundenorientiert</div>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 text-center">
+                      <div className="inline-flex items-center bg-gradient-to-r from-scaleit-red to-scaleit-purple text-white px-4 py-2 rounded-full text-sm font-medium">
+                        <Star className="w-4 h-4 mr-2" />
+                        Ihr individueller ACMP Service
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

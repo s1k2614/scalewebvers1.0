@@ -869,9 +869,9 @@ export default function AuthNPage() {
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
               >
                 <Clock className="w-12 h-12 text-scaleit-red mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Support 8-18 Uhr</h3>
                 <p className="text-white">
-                  Rund um die Uhr erreichbar für alle Ihre Anliegen
+                  Montag bis Freitag 8-18 Uhr erreichbar für alle Ihre Anliegen
                 </p>
               </motion.div>
 

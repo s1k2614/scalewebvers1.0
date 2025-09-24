@@ -206,7 +206,7 @@ export default function JobsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-scaleit-purple to-scaleit-red">
+      <section className="py-20 bg-gradient-to-r from-scaleit-purple to-scaleit-red">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

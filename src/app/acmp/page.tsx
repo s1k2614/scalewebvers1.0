@@ -110,7 +110,7 @@ export default function ACMPLandingPage() {
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-scaleit-red flex-shrink-0" />
-                        <span>24/7 Support</span>
+                        <span>Support 8-18 Uhr</span>
                       </div>
                     </div>
 
@@ -125,7 +125,7 @@ export default function ACMPLandingPage() {
                         <div className="text-sm text-scaleit-gray/80">ScaleITS CI</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-scaleit-gray">24/7</div>
+                        <div className="text-3xl font-bold text-scaleit-gray">8-18</div>
                         <div className="text-sm text-scaleit-gray/80">Support</div>
                       </div>
                     </div>
@@ -203,7 +203,7 @@ export default function ACMPLandingPage() {
                         <div className="text-sm text-scaleit-gray/80">Individual</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-scaleit-red">24/7</div>
+                        <div className="text-3xl font-bold text-scaleit-red">8-18 Uhr</div>
                         <div className="text-sm text-scaleit-gray/80">Premium</div>
                       </div>
                     </div>
@@ -260,8 +260,8 @@ export default function ACMPLandingPage() {
                     </tr>
                     <tr className="border-b border-gray-100">
                       <td className="py-4 px-6 font-medium text-scaleit-black">Support</td>
-                      <td className="text-center py-4 px-6 text-scaleit-gray">24/7 Standard</td>
-                      <td className="text-center py-4 px-6 text-scaleit-red">24/7 Premium</td>
+                      <td className="text-center py-4 px-6 text-scaleit-gray">8-18 Uhr Standard</td>
+                      <td className="text-center py-4 px-6 text-scaleit-red">8-18 Uhr Premium</td>
                     </tr>
                     <tr className="border-b border-gray-100">
                       <td className="py-4 px-6 font-medium text-scaleit-black">Anpassungen</td>

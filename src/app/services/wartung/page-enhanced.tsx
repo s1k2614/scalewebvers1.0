@@ -49,7 +49,7 @@ export default function WartungPage() {
       title: "Präventive Wartung",
       description: "Proaktive Systemüberwachung und Wartung",
       responseTime: "Kontinuierlich",
-      availability: "24/7 Monitoring",
+      availability: "Monitoring 8-18 Uhr",
       features: [
         "Automated System Monitoring",
         "Präventive Patch-Management",
@@ -65,7 +65,7 @@ export default function WartungPage() {
       title: "Emergency Support",
       description: "Notfall-Support für kritische Systemausfälle",
       responseTime: "< 30 Minuten",
-      availability: "24/7 verfügbar",
+      availability: "8-18 Uhr verfügbar",
       features: [
         "Sofortige Notfall-Response",
         "Disaster Recovery Support",
@@ -104,7 +104,7 @@ export default function WartungPage() {
       features: [
         "First & Second Level Support",
         "Erweiterte Support-Zeiten (Mo-Fr 8-19h)",
-        "Proaktives Monitoring 24/7",
+        "Proaktives Monitoring 8-18 Uhr",
         "Automatisches Patch-Management",
         "Backup-Überwachung",
         "Telefon-Support",
@@ -122,7 +122,7 @@ export default function WartungPage() {
       description: "Premium-Support für kritische Geschäftssysteme", 
       features: [
         "Multi-Level Support inkl. Emergency",
-        "24/7 Notfall-Support",
+        "Notfall-Support 8-18 Uhr",
         "Dedicated Technical Account Manager",
         "Proactive Health Checks",
         "Priority Patch-Management",
@@ -151,7 +151,7 @@ export default function WartungPage() {
       title: "Ticket-System", 
       description: "Strukturierte Bearbeitung Ihrer Anfragen",
       details: "Über Kontaktformular",
-      availability: "24/7 Eingang"
+      availability: "8-18 Uhr Eingang"
     },
     {
       icon: Monitor,

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Navigation from '../../../components/Navigation';
+import Hero from '../../../components/Hero';
 import Footer from '../../../components/Footer';
 import { 
   Settings, Code, Database, Cloud, Shield, Monitor,
@@ -215,7 +215,7 @@ export default function ImplementationPage() {
         "Disaster Recovery Planning",
         "Change Management Program",
         "6 Monate Premium Support",
-        "24/7 Go-Live Support", 
+        "Go-Live Support 8-18 Uhr", 
         "Comprehensive Training Program",
         "Custom Development Services",
         "Executive Reporting"
@@ -227,7 +227,7 @@ export default function ImplementationPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
-      <Navigation />
+      <Hero />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -403,7 +403,7 @@ export default function ImplementationPage() {
                   <div className="bg-white rounded-2xl p-8 shadow-xl">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="text-center p-4 bg-green-50 rounded-lg">
-                        <div className="text-2xl font-bold text-green-600">24/7</div>
+                        <div className="text-2xl font-bold text-green-600">8-18 Uhr</div>
                         <div className="text-sm text-gray-600">Monitoring</div>
                       </div>
                       <div className="text-center p-4 bg-emerald-50 rounded-lg">
